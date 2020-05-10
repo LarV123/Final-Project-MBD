@@ -36,19 +36,28 @@ begin
 end;
 /
 
--- Create or replace procedure UPDATE_ESTIMASI
--- AS
--- 	cursor update_bar
---     is
---         select b.id_barang, us.Tanggal_update
---             from barang b, update_stock us
---             where b.id_barang = us.id_barang
---             and us.tipe_update = 'Tambah';
---     newestimate number;
--- begin
-	
--- END;
--- /
+Create or replace procedure UPDATE_ESTIMASI
+AS
+	cursor update_bar
+    is
+        select id_barang,
+                avg(DATEDIFF(day, tanggal_update, lead(tanggal_update,1) over(
+                    partition by id_barang
+                    order by id_barang, id_update_stock
+                ))) as average
+            from update_stock
+            order by id_barang, id_update_stock
+            where tipe_update = 'Tambah';
+    newestimate number;
+begin
+	for r_update_bar in update_bar
+    loop
+        update barang
+            set estimasi_produksi= r_update_bar.average
+            where r_update_bar.id_barang = id_barang
+    end loop
+END;
+/
 
 select p.id_pesanan, estimasi_lama_pengiriman(p.id_pesanan)
     from pesanan p
