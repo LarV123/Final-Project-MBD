@@ -99,8 +99,8 @@ drop table UPDATE_STOCK cascade constraints;
 /* Table: BARANG                                                */
 /*==============================================================*/
 create table BARANG (
-   ID_BARANG            VARCHAR2(1024)        not null,
-   ID_KATEGORI_BARANG   VARCHAR2(1024),
+   ID_BARANG            VARCHAR2(7)        not null,
+   ID_KATEGORI_BARANG   VARCHAR2(7),
    NAMA_BARANG          VARCHAR2(1024),
    HARGA_PRODUKSI       INTEGER,
    HARGA_JUAL           INTEGER,
@@ -120,8 +120,8 @@ create index KATEGORI_BARANG_FK on BARANG (
 /* Table: DETAIL_PEMESANAN                                      */
 /*==============================================================*/
 create table DETAIL_PEMESANAN (
-   ID_BARANG            VARCHAR2(1024),
-   ID_PESANAN           VARCHAR2(1024),
+   ID_BARANG            VARCHAR2(7),
+   ID_PESANAN           VARCHAR2(7),
    KUANTITAS            INTEGER,
    SUBTOTAL             INTEGER,
    DISCOUNT_BARANG      INTEGER
@@ -145,7 +145,7 @@ create index MEMESAN_BARANG_FK on DETAIL_PEMESANAN (
 /* Table: JENIS_EKSPEDISI                                       */
 /*==============================================================*/
 create table JENIS_EKSPEDISI (
-   ID_EKSPEDISI         VARCHAR2(1024)        not null,
+   ID_EKSPEDISI         VARCHAR2(7)        not null,
    NAMA_EKSPEDISI       VARCHAR2(1024),
    KONTAK_EKSPEDISI     VARCHAR2(1024),
    constraint PK_JENIS_EKSPEDISI primary key (ID_EKSPEDISI)
@@ -155,7 +155,7 @@ create table JENIS_EKSPEDISI (
 /* Table: JENIS_PELANGGAN                                       */
 /*==============================================================*/
 create table JENIS_PELANGGAN (
-   ID_JENIS_PELANGGAN   VARCHAR2(1024)        not null,
+   ID_JENIS_PELANGGAN   VARCHAR2(7)        not null,
    NAMA_JENIS_PELANGGAN VARCHAR2(1024),
    PRIORITAS_PELANGGAN  INTEGER,
    constraint PK_JENIS_PELANGGAN primary key (ID_JENIS_PELANGGAN)
@@ -165,7 +165,7 @@ create table JENIS_PELANGGAN (
 /* Table: JENIS_PEMBAYARAN                                      */
 /*==============================================================*/
 create table JENIS_PEMBAYARAN (
-   ID_JENIS_PEMBAYARAN  VARCHAR2(1024)        not null,
+   ID_JENIS_PEMBAYARAN  VARCHAR2(7)        not null,
    NAMA_JENIS_PEMBAYARAN VARCHAR2(1024),
    constraint PK_JENIS_PEMBAYARAN primary key (ID_JENIS_PEMBAYARAN)
 );
@@ -174,7 +174,7 @@ create table JENIS_PEMBAYARAN (
 /* Table: KATEGORI_BARANG                                       */
 /*==============================================================*/
 create table KATEGORI_BARANG (
-   ID_KATEGORI_BARANG   VARCHAR2(1024)        not null,
+   ID_KATEGORI_BARANG   VARCHAR2(7)        not null,
    NAMA_KATEGORI_BARANG VARCHAR2(1024),
    constraint PK_KATEGORI_BARANG primary key (ID_KATEGORI_BARANG)
 );
@@ -183,8 +183,8 @@ create table KATEGORI_BARANG (
 /* Table: KOTA_KABUPATEN                                        */
 /*==============================================================*/
 create table KOTA_KABUPATEN (
-   ID_PROVINSI          VARCHAR2(1024),
-   ID_KABUPATEN         VARCHAR2(1024)        not null,
+   ID_PROVINSI          VARCHAR2(7),
+   ID_KABUPATEN         VARCHAR2(7)        not null,
    NAMA_KABUPATEN       VARCHAR2(1024),
    constraint PK_KOTA_KABUPATEN primary key (ID_KABUPATEN)
 );
@@ -200,9 +200,9 @@ create index MEMILIKI_KABUPATEN_FK on KOTA_KABUPATEN (
 /* Table: PELANGGAN                                             */
 /*==============================================================*/
 create table PELANGGAN (
-   ID_PELANGGAN         VARCHAR2(1024)        not null,
-   ID_JENIS_PELANGGAN   VARCHAR2(1024),
-   ID_KABUPATEN         VARCHAR2(1024),
+   ID_PELANGGAN         VARCHAR2(7)        not null,
+   ID_JENIS_PELANGGAN   VARCHAR2(7),
+   ID_KABUPATEN         VARCHAR2(7),
    NAMA_PELANGGAN       VARCHAR2(1024),
    TELEPON_PELANGGAN    VARCHAR2(1024),
    ALAMAT_PELANGGAN     VARCHAR2(1024),
@@ -228,9 +228,9 @@ create index BERTEMPAT_KOTA_FK on PELANGGAN (
 /* Table: PEMBAYARAN                                            */
 /*==============================================================*/
 create table PEMBAYARAN (
-   ID_PEMBAYARAN        VARCHAR2(1024)        not null,
-   ID_JENIS_PEMBAYARAN  VARCHAR2(1024),
-   ID_PESANAN           VARCHAR2(1024),
+   ID_PEMBAYARAN        VARCHAR2(7)        not null,
+   ID_JENIS_PEMBAYARAN  VARCHAR2(7),
+   ID_PESANAN           VARCHAR2(7),
    TANGGAL_PEMBAYARAN   DATE,
    JUMLAH_PEMBAYARAN    NUMBER(8,2),
    KEPERLUAN_PEMBAYARAN VARCHAR2(1024),
@@ -255,9 +255,9 @@ create index DETAIL_PEMBAYARAN_FK on PEMBAYARAN (
 /* Table: PENGIRIMAN                                            */
 /*==============================================================*/
 create table PENGIRIMAN (
-   ID_PENGIRIMAN        VARCHAR2(1024)        not null,
-   ID_PESANAN           VARCHAR2(1024),
-   ID_EKSPEDISI         VARCHAR2(1024),
+   ID_PENGIRIMAN        VARCHAR2(7)        not null,
+   ID_PESANAN           VARCHAR2(7),
+   ID_EKSPEDISI         VARCHAR2(7),
    TANGGAL_MENGIRIM     TIMESTAMP,
    KODE_RESI            VARCHAR2(1024),
    constraint PK_PENGIRIMAN primary key (ID_PENGIRIMAN)
@@ -281,9 +281,9 @@ create index JENIS_EKSPEDISI_FK on PENGIRIMAN (
 /* Table: PESANAN                                               */
 /*==============================================================*/
 create table PESANAN (
-   ID_PESANAN           VARCHAR2(1024)        not null,
-   ID_PENGIRIMAN        VARCHAR2(1024),
-   ID_PELANGGAN         VARCHAR2(1024),
+   ID_PESANAN           VARCHAR2(7)        not null,
+   ID_PENGIRIMAN        VARCHAR2(7),
+   ID_PELANGGAN         VARCHAR2(7),
    NAMA_PESANAN         VARCHAR2(1024),
    TANGGAL_PESAN        TIMESTAMP,
    STATUS_PESANAN       SMALLINT,
@@ -311,7 +311,7 @@ create index MEMESAN_FK on PESANAN (
 /* Table: PROVINSI                                              */
 /*==============================================================*/
 create table PROVINSI (
-   ID_PROVINSI          VARCHAR2(1024)        not null,
+   ID_PROVINSI          VARCHAR2(7)        not null,
    NAMA_PROVINSI        VARCHAR2(1024),
    constraint PK_PROVINSI primary key (ID_PROVINSI)
 );
@@ -320,8 +320,8 @@ create table PROVINSI (
 /* Table: UPDATE_STOCK                                          */
 /*==============================================================*/
 create table UPDATE_STOCK (
-   ID_BARANG            VARCHAR2(1024),
-   ID_UPDATE_STOCK      VARCHAR2(1024),
+   ID_BARANG            VARCHAR2(7),
+   ID_UPDATE_STOCK      VARCHAR2(7),
    TANGGAL_UPDATE       DATE,
    TIPE_UPDATE          VARCHAR2(1024),
    JUMLAH_UPDATE        INTEGER
