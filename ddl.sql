@@ -259,7 +259,7 @@ create table PENGIRIMAN (
    ID_PESANAN           VARCHAR2(7),
    ID_EKSPEDISI         VARCHAR2(7),
    TANGGAL_MENGIRIM     TIMESTAMP,
-   KODE_RESI            VARCHAR2(1024),
+   KODE_RESI            VARCHAR2(12),
    constraint PK_PENGIRIMAN primary key (ID_PENGIRIMAN)
 );
 
