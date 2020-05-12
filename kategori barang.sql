@@ -9,20 +9,31 @@ create sequence SEQ_ID_KATEGORI_BARANG
 
 create or replace trigger TRG_INS_KATEGORI_BARANG
 before insert on KATEGORI_BARANG
+for each row
 begin
     if (:new.ID_KATEGORI_BARANG is null)
     then
-        :new.ID_KATEGORI_BARANG := 'KB' || SEQ_ID_KATEGORI_BARANG.nextval;
+        select 'KB' || SEQ_ID_KATEGORI_BARANG.nextval into :new.ID_KATEGORI_BARANG from dual;
     end if;
-end;/
+end;
+/
 
-insert KATEGORI_BARANG values (NULL, 'Alat Kedokteran Umum');
-insert KATEGORI_BARANG values (NULL, 'X-Ray Viewer');
-insert KATEGORI_BARANG values (NULL, 'Alkes Disposable');
-insert KATEGORI_BARANG values (NULL, 'Alat Bantu Bergerak');
-insert KATEGORI_BARANG values (NULL, 'Alat Bantu Dengar');
-insert KATEGORI_BARANG values (NULL, 'Defibrillator');
-insert KATEGORI_BARANG values (NULL, 'Rapid Test');
-insert KATEGORI_BARANG values (NULL, 'Alat P3K');
-insert KATEGORI_BARANG values (NULL, 'Model Kerangka Manusia');
-insert KATEGORI_BARANG values (NULL, 'Termometer');
+create or replace function FUNC_KATEGORI_BARANG_TO_ID (nama in VARCHAR)
+return VARCHAR
+is
+    KATEGORI_ID VARCHAR(7);
+begin
+    select kb.ID_KATEGORI_BARANG into KATEGORI_ID from KATEGORI_BARANG kb where kb.NAMA_KATEGORI_BARANG = nama;
+    return KATEGORI_ID;
+end;
+
+insert into KATEGORI_BARANG values (NULL, 'Alat Kedokteran Umum');
+insert into KATEGORI_BARANG values (NULL, 'X-Ray Viewer');
+insert into KATEGORI_BARANG values (NULL, 'Alkes Disposable');
+insert into KATEGORI_BARANG values (NULL, 'Alat Bantu Bergerak');
+insert into KATEGORI_BARANG values (NULL, 'Alat Bantu Dengar');
+insert into KATEGORI_BARANG values (NULL, 'Defibrillator');
+insert into KATEGORI_BARANG values (NULL, 'Rapid Test');
+insert into KATEGORI_BARANG values (NULL, 'Alat P3K');
+insert into KATEGORI_BARANG values (NULL, 'Model Kerangka Manusia');
+insert into KATEGORI_BARANG values (NULL, 'Termometer');
