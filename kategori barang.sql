@@ -27,13 +27,12 @@ begin
     return KATEGORI_ID;
 end;
 
+delete from KATEGORI_BARANG;
+
 insert into KATEGORI_BARANG values (NULL, 'Alat Kedokteran Umum');
 insert into KATEGORI_BARANG values (NULL, 'X-Ray Viewer');
 insert into KATEGORI_BARANG values (NULL, 'Alkes Disposable');
-insert into KATEGORI_BARANG values (NULL, 'Alat Bantu Bergerak');
-insert into KATEGORI_BARANG values (NULL, 'Alat Bantu Dengar');
+insert into KATEGORI_BARANG values (NULL, 'Alat Bantu');
 insert into KATEGORI_BARANG values (NULL, 'Defibrillator');
 insert into KATEGORI_BARANG values (NULL, 'Rapid Test');
 insert into KATEGORI_BARANG values (NULL, 'Alat P3K');
-insert into KATEGORI_BARANG values (NULL, 'Model Kerangka Manusia');
-insert into KATEGORI_BARANG values (NULL, 'Termometer');
