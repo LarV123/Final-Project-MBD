@@ -1,0 +1,9 @@
+insert into JENIS_PEMBAYARAN values ('JP1', 'OVO');
+insert into JENIS_PEMBAYARAN values ('JP2', 'GO-PAY');
+insert into JENIS_PEMBAYARAN values ('JP3', 'Mandiri');
+insert into JENIS_PEMBAYARAN values ('JP4', 'BCA');
+insert into JENIS_PEMBAYARAN values ('JP5', 'BNI');
+insert into JENIS_PEMBAYARAN values ('JP6', 'BRI');
+insert into JENIS_PEMBAYARAN values ('JP7', 'BTN');
+insert into JENIS_PEMBAYARAN values ('JP8', 'Cash');
+insert into JENIS_PEMBAYARAN values ('JP9', 'Other');
