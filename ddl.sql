@@ -282,7 +282,6 @@ create index JENIS_EKSPEDISI_FK on PENGIRIMAN (
 /*==============================================================*/
 create table PESANAN (
    ID_PESANAN           VARCHAR2(7)        not null,
-   ID_PENGIRIMAN        VARCHAR2(7),
    ID_PELANGGAN         VARCHAR2(7),
    TANGGAL_PESAN        TIMESTAMP,
    STATUS_PESANAN       SMALLINT,
@@ -376,10 +375,6 @@ alter table PENGIRIMAN
 alter table PESANAN
    add constraint FK_PESANAN_MEMESAN_PELANGGA foreign key (ID_PELANGGAN)
       references PELANGGAN (ID_PELANGGAN);
-
-alter table PESANAN
-   add constraint FK_PESANAN_MENGIRIM2_PENGIRIM foreign key (ID_PENGIRIMAN)
-      references PENGIRIMAN (ID_PENGIRIMAN);
 
 alter table UPDATE_STOCK
    add constraint FK_UPDATE_S_UPDATE_ST_BARANG foreign key (ID_BARANG)
