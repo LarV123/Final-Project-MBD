@@ -1,3 +1,13 @@
+/* insert: jenis ekspedisi */
+
+insert into JENIS_EKSPEDISI values ('JE1','Papandaya Cargo','0318546393');
+insert into JENIS_EKSPEDISI values ('JE2','Aura Abadi Logistik','082141127937');
+insert into JENIS_EKSPEDISI values ('JE3','Klik Logistics','02189459999');
+insert into JENIS_EKSPEDISI values ('JE4','Makharya Cargo','03199921804');
+insert into JENIS_EKSPEDISI values ('JE5','Deliveree','0317654321');
+insert into JENIS_EKSPEDISI values ('JE6','Expedisi Surabaya','082245318778');
+insert into JENIS_EKSPEDISI values ('JE7','Almaguna Cargo','0313810284');
+	
 /* insert: jenis pelanggan */
 
 insert into JENIS_PELANGGAN values ('JP1', 'Rumah Sakit', '1');
