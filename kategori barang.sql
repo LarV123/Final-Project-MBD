@@ -26,6 +26,7 @@ begin
     select kb.ID_KATEGORI_BARANG into KATEGORI_ID from KATEGORI_BARANG kb where kb.NAMA_KATEGORI_BARANG = nama;
     return KATEGORI_ID;
 end;
+/
 
 delete from KATEGORI_BARANG;
 
