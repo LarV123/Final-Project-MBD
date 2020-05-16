@@ -19,11 +19,11 @@
 ---
 ### Query
 - [x] Menampilkan pesanan selesai dengan range tanggal
-- [ ] Menampilkan pendapatan per kategori barang dengan range tanggal
+- [x] Menampilkan pendapatan per kategori barang dengan range tanggal
 ### Procedure
 - [x] Prosedur mengatur prioritas pelanggan
 ### Function
-- [ ] menghitung list pendapatan per kategori barang dengan range tanggal
+- [x] menghitung list pendapatan per kategori barang dengan range tanggal
 ### Sequence
 - [x] Sequence ID Jenis pesanan
 ### Trigger
