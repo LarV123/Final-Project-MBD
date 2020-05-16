@@ -6249,6 +6249,16 @@ insert into DETAIL_PEMESANAN values ('B24', 'P1299', 17, 475000, 0);
 insert into DETAIL_PEMESANAN values ('B41', 'P1300', 1, 1000000, 0);
 insert into DETAIL_PEMESANAN values ('B36', 'P1300', 1, 500000, 0);
 
+insert into JENIS_PEMBAYARAN values ('JP1', 'OVO');
+insert into JENIS_PEMBAYARAN values ('JP2', 'GO-PAY');
+insert into JENIS_PEMBAYARAN values ('JP3', 'Mandiri');
+insert into JENIS_PEMBAYARAN values ('JP4', 'BCA');
+insert into JENIS_PEMBAYARAN values ('JP5', 'BNI');
+insert into JENIS_PEMBAYARAN values ('JP6', 'BRI');
+insert into JENIS_PEMBAYARAN values ('JP7', 'BTN');
+insert into JENIS_PEMBAYARAN values ('JP8', 'Cash');
+insert into JENIS_PEMBAYARAN values ('JP9', 'Other');
+
 insert into PEMBAYARAN values ('PB1', 'JP8', 'P1', TO_DATE('03/08/2019', 'DD/MM/YYYY'), 1158000000, 'LUNAS');
 insert into PEMBAYARAN values ('PB2', 'JP1', 'P2', TO_DATE('03/08/2019', 'DD/MM/YYYY'), 1000000, 'LUNAS');
 insert into PEMBAYARAN values ('PB3', 'JP9', 'P3', TO_DATE('04/08/2019', 'DD/MM/YYYY'), 500000, 'LUNAS');
