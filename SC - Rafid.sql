@@ -1,20 +1,3 @@
-/* Select 1 (Pesanan selesai) */
-select ps.ID_PESANAN, pl.NAMA_PELANGGAN, pl.ALAMAT_PELANGGAN, kk.NAMA_KABUPATEN, ps.TANGGAL_PESAN, pb.TANGGAL_PEMBAYARAN, pg.TANGGAL_MENGIRIM, pg.KODE_RESI, ps.JUMLAH_TERBAYARKAN
-from pelanggan pl, KOTA_KABUPATEN kk, pesanan ps, pengiriman pg, pembayaran pb
-where ps.ID_PESANAN = pg.ID_PESANAN
-    and ps.ID_PESANAN = pb.ID_PESANAN
-    and ps.ID_PELANGGAN = pl.ID_PELANGGAN
-    and pl.ID_KABUPATEN = kk.ID_KABUPATEN
-    and pg.TANGGAL_MENGIRIM >= TO_DATE('08/08/2019', 'DD/MM/YYYY')
-    and pg.TANGGAL_MENGIRIM <= TO_DATE('08/09/2019', 'DD/MM/YYYY')
-order by TANGGAL_PESAN asc;
-
-
-/* Select 2 (pendapatan per kategori barang) */
-select NAMA_KATEGORI_BARANG, hitung_pendapatan_per_kategori_barang(ID_KATEGORI_BARANG, TO_DATE('08/08/2019', 'DD/MM/YYYY'), TO_DATE('09/08/2019', 'DD/MM/YYYY')) as Pendapatan
-from kategori_barang;
-
-
 /* Procedure */
 create or replace procedure Atur_prioritas_jenis_pelanggan (prio in integer)
 as
@@ -72,3 +55,20 @@ begin
     Atur_prioritas_jenis_pelanggan(:new.PRIORITAS_PELANGGAN);
 end;
 /
+
+
+/* Select 1 (Pesanan selesai) */
+select ps.ID_PESANAN, pl.NAMA_PELANGGAN, pl.ALAMAT_PELANGGAN, kk.NAMA_KABUPATEN, ps.TANGGAL_PESAN, pb.TANGGAL_PEMBAYARAN, pg.TANGGAL_MENGIRIM, pg.KODE_RESI, ps.JUMLAH_TERBAYARKAN
+from pelanggan pl, KOTA_KABUPATEN kk, pesanan ps, pengiriman pg, pembayaran pb
+where ps.ID_PESANAN = pg.ID_PESANAN
+    and ps.ID_PESANAN = pb.ID_PESANAN
+    and ps.ID_PELANGGAN = pl.ID_PELANGGAN
+    and pl.ID_KABUPATEN = kk.ID_KABUPATEN
+    and pg.TANGGAL_MENGIRIM >= TO_DATE('08/08/2019', 'DD/MM/YYYY')
+    and pg.TANGGAL_MENGIRIM <= TO_DATE('08/09/2019', 'DD/MM/YYYY')
+order by TANGGAL_PESAN asc;
+
+
+/* Select 2 (pendapatan per kategori barang) */
+select NAMA_KATEGORI_BARANG, hitung_pendapatan_per_kategori_barang(ID_KATEGORI_BARANG, TO_DATE('08/08/2019', 'DD/MM/YYYY'), TO_DATE('09/08/2019', 'DD/MM/YYYY')) as Pendapatan
+from kategori_barang;
