@@ -24,8 +24,8 @@ noorder;
 /
 
 
-create or replace trigger BIUD_PESANAN_TOTAL_HARGA
-before insert or update or delete on detail_pemesanan
+create or replace trigger BIU_PESANAN_TOTAL_HARGA
+before insert or update on detail_pemesanan
 for each row
 DECLARE
     newtotal_harga number;
@@ -35,6 +35,7 @@ begin
         from detail_pemesanan dp
         where :new.id_pesanan = dp.id_pesanan
         group by dp.id_pesanan;
+    newtotal_harga := newtotal_harga + (:new.subtotal * (1-:new.discount_barang));
     update pesanan
         set total_harga=newtotal_harga
         where :new.id_pesanan = id_pesanan;
