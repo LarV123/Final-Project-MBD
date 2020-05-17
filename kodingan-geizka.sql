@@ -102,9 +102,11 @@ begin
             loop
                 insert into UPDATE_STOCK values (REC_DETAIL_PESANAN.ID_BARANG , null, TANGGAL_UPDATE, 'Kurang', REC_DETAIL_PESANAN.KUANTITAS);
             end loop;
+            update PESANAN set STATUS_PESANAN = 1 where PESANAN.ID_PESANAN = REC_PESANAN.ID_PESANAN;
         end if;
     end loop;
 end;
+/
 
 /* 
 
