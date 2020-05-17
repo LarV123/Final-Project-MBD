@@ -13,11 +13,11 @@ select p.ID_PESANAN, pl.NAMA_PELANGGAN, p.TANGGAL_PESAN, p.STATUS_PESANAN, p.DIS
 Menampilkan jenis ekspedisi yang paling populer tiap provinsi
 
  */
-create or replace view JENIS_EKSPEDISI_PER_PROVINSI as select p.ID_PROVINSI, pg.ID_EKSPEDISI, count(*) as P_COUNT
+create or replace view JENIS_EKSPEDISI_PER_PROVINSI as select p.ID_PROVINSI as ID_PROVINSI, pg.ID_EKSPEDISI as ID_EKSPEDISI, count(*) as P_COUNT
     from PENGIRIMAN pg inner join PESANAN ps on pg.ID_PESANAN = ps.ID_PESANAN inner join PELANGGAN pl on ps.ID_PELANGGAN = pl.ID_PELANGGAN 
     inner join KOTA_KABUPATEN kk on pl.ID_KABUPATEN = kk.ID_KABUPATEN
     inner join PROVINSI p on kk.ID_PROVINSI = p.ID_PROVINSI
-    GROUP BY ID_PROVINSI, pg.ID_EKSPEDISI;
+    GROUP BY p.ID_PROVINSI, pg.ID_EKSPEDISI;
 
 create or replace view MAX_PER_PROVINSI as select ID_PROVINSI, max(P_COUNT) as VAL
     from JENIS_EKSPEDISI_PER_PROVINSI
@@ -102,9 +102,11 @@ begin
             loop
                 insert into UPDATE_STOCK values (REC_DETAIL_PESANAN.ID_BARANG , null, TANGGAL_UPDATE, 'Kurang', REC_DETAIL_PESANAN.KUANTITAS);
             end loop;
+            update PESANAN set STATUS_PESANAN = 1 where PESANAN.ID_PESANAN = REC_PESANAN.ID_PESANAN;
         end if;
     end loop;
 end;
+/
 
 /* 
 
