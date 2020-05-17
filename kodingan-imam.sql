@@ -57,7 +57,6 @@ AS
             where next_tanggal is not null 
             group by id_barang
             order by id_barang;
-    newestimate number;
 begin
 	for r_update_bar in update_bar
     loop
