@@ -50,9 +50,16 @@ create sequence SEQ_ID_Jenis_Pelanggan
 create or replace trigger TRG_BI_INS_JENIS_PELANGGAN
 before insert on JENIS_PELANGGAN
 for each row
+declare
+    idbaru number;
 begin
-    select 'JP' || SEQ_ID_Jenis_Pelanggan.nextval into :new.ID_JENIS_PELANGGAN from dual;
-    Atur_prioritas_jenis_pelanggan(:new.PRIORITAS_PELANGGAN);
+    idbaru := SEQ_ID_Jenis_Pelanggan.nextval;
+    select 'JL' || idbaru into :new.ID_JENIS_PELANGGAN from dual;
+    
+    if idbaru != :new.PRIORITAS_PELANGGAN
+    then
+        Atur_prioritas_jenis_pelanggan(:new.PRIORITAS_PELANGGAN);
+    end if;
 end;
 /
 
