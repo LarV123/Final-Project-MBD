@@ -1,6 +1,3 @@
-REM   Script: FP MBD template
-REM   light version
-
 create table BARANG ( 
    ID_BARANG            VARCHAR2(7)        not null, 
    ID_KATEGORI_BARANG   VARCHAR2(7), 
@@ -8555,4 +8552,3 @@ select 'PG984','P984','JE1',TO_DATE('26/12/2019', 'DD/MM/YYYY'),'1201912264'  FR
   select 'PG1198','P1198','JE6',TO_DATE('26/01/2020', 'DD/MM/YYYY'),'6202001261'  FROM dual UNION ALL 
   select 'PG1199','P1199','JE5',TO_DATE('26/01/2020', 'DD/MM/YYYY'),'5202001262'  FROM dual UNION ALL 
   select 'PG1200','P1200','JE3',TO_DATE('26/01/2020', 'DD/MM/YYYY'),'3202001263'  FROM dual;
-
