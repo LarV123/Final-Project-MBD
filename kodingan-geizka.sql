@@ -96,9 +96,9 @@ as
 begin
     for REC_PESANAN in PESANAN_HANDLE
     loop
-        if FUNC_CHECK_PESANAN_READY(p.ID_PESANAN) = 1
+        if FUNC_CHECK_PESANAN_READY(REC_PESANAN.ID_PESANAN) = 1
         then
-            for REC_DETAIL_PESANAN in (select dp.ID_BARANG as ID_BARANG, dp.KUANTITAS as KUANTITAS from DETAIL_PEMESANAN dp where )
+            for REC_DETAIL_PESANAN in (select dp.ID_BARANG as ID_BARANG, dp.KUANTITAS as KUANTITAS from DETAIL_PEMESANAN dp where dp.ID_PESANAN = REC_PESANAN.ID_PESANAN)
             loop
                 insert into UPDATE_STOCK values (REC_DETAIL_PESANAN.ID_BARANG , null, TANGGAL_UPDATE, 'Kurang', REC_DETAIL_PESANAN.KUANTITAS);
             end loop;
