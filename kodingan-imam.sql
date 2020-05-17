@@ -13,7 +13,7 @@ end;
 /
 
 -- ini harusnya ngikutin yang udah ada di pesanan.sql sih
-create sequence id_pesanan_SEQ
+create sequence PESANAN_ID_SEQ
 start with 1
 increment by 1
 cache 20
@@ -24,8 +24,25 @@ noorder;
 /
 
 
-create or replace trigger AIUD_PESANAN_TOTAL_HARGA
+create or replace trigger BIUD_PESANAN_TOTAL_HARGA
 before insert or update or delete on detail_pemesanan
+for each row
+DECLARE
+    newtotal_harga number;
+begin
+	select sum(subtotal * (1-discount_barang))
+        into newtotal_harga
+        from detail_pemesanan dp
+        where :new.id_pesanan = dp.id_pesanan
+        group by dp.id_pesanan;
+    update pesanan
+        set total_harga=newtotal_harga
+        where :new.id_pesanan = id_pesanan;
+end;
+/
+
+create or replace trigger AD_PESANAN_TOTAL_HARGA
+after delete on detail_pemesanan
 for each row
 DECLARE
     newtotal_harga number;
@@ -79,8 +96,25 @@ select p.id_pesanan,p.Tanggal_pesan, pr.Tanggal_mengirim, pr.Tanggal_mengirim - 
 
 
 -- Auto update jumlah terbayarkan
-create or replace trigger AIUD_PESANAN_jumlah_terbayarkan
+create or replace trigger BIU_PESANAN_jumlah_terbayarkan
 before insert or update or delete on pembayaran
+for each row
+DECLARE
+    newtotal number;
+begin
+	select sum(jumlah_pembayaran)
+        into newtotal
+        from pembayaran p
+        where :new.id_pesanan = p.id_pesanan
+        group by p.id_pesanan;
+    update pesanan
+        set jumlah_terbayarkan=newtotal
+        where :new.id_pesanan = id_pesanan;
+end;
+/
+
+create or replace trigger AD_PESANAN_jumlah_terbayarkan
+after delete on pembayaran
 for each row
 DECLARE
     newtotal number;
