@@ -373,11 +373,11 @@ INSERT INTO JENIS_EKSPEDISI (ID_EKSPEDISI, NAMA_EKSPEDISI, KONTAK_EKSPEDISI)
   select 'JE6','Expedisi Surabaya','082245318778'  FROM dual UNION ALL 
   select 'JE7','Almaguna Cargo','0313810284'  FROM dual;
 
-INSERT INTO JENIS_PELANGGAN (ID_JENIS_PELANGGAN, NAMA_JENIS_PELANGGAN, PRIORITAS_PELANGGAN)  
-  select 'JP1', 'Rumah Sakit', '1'  FROM dual UNION ALL 
-  select 'JP2', 'Lembaga Pemerintahan', '2'  FROM dual UNION ALL 
-  select 'JP3', 'Toko', '3'  FROM dual UNION ALL 
-  select 'JP4', 'Rumah Tangga', '4'  FROM dual;
+INSERT INTO JENIS_PELANGGAN (ID_JENIS_PELANGGAN, NAMA_JENIS_PELANGGAN, PRIORITAS_PELANGGAN) 
+  select 'JL1', 'Rumah Sakit', '1'  FROM dual UNION ALL
+  select 'JL2', 'Lembaga Pemerintahan', '2'  FROM dual UNION ALL
+  select 'JL3', 'Toko', '3'  FROM dual UNION ALL
+  select 'JL4', 'Rumah Tangga', '4'  FROM dual;
 
 INSERT INTO PROVINSI (ID_PROVINSI, NAMA_PROVINSI)  
   select 'PV1', 'Jawa Timur'  FROM dual UNION ALL 
@@ -437,207 +437,207 @@ INSERT INTO KOTA_KABUPATEN (ID_PROVINSI, ID_KABUPATEN, NAMA_KABUPATEN)
   select 'PV12','K41', 'Mataram'  FROM dual UNION ALL 
   select 'PV12','K42', 'Dompu'  FROM dual;
 
-INSERT INTO PELANGGAN (ID_PELANGGAN, ID_JENIS_PELANGGAN, ID_KABUPATEN, NAMA_PELANGGAN, TELEPON_PELANGGAN,ALAMAT_PELANGGAN, EMAIL_PELANGGAN)  
-  select 'PL1','JP1','K13','RS Islam Jakarta','0215732241','Jl.Jend. Sudirman No.Kav 49', 'RSIslamJakarta@gmail.com'  FROM dual UNION ALL 
-  select 'PL2','JP1','K13','RS Harum Sisma Medika','0218617212','Jl.S. Kalimalang Tarum Barat', 'RSHarumSiskaMedika@gmail.com'  FROM dual UNION ALL 
-  select 'PL3','JP1','K1','Medical Center ITS','0315927547','Jl.Arief Rahman Hakim No.213', 'MedCenITS@gmail.com'  FROM dual UNION ALL 
-  select 'PL4','JP1','K1','RS Pura Raharja','0315019898','Jl.Pucang Adi No.12-14', 'RSPuraRaharja@gmail.com'  FROM dual UNION ALL 
-  select 'PL5','JP1','K1','RS Premier Surabaya','0315993211','Jl.Nginden Intan Barat No.B', 'RSPremierSurabaya@gmail.com'  FROM dual UNION ALL 
-  select 'PL6','JP1','K9','RS Azra Bogor','02518318456','Jl.Raya Pajajaran No.219', 'RSAzraBogor@gmail.com'  FROM dual UNION ALL 
-  select 'PL7','JP1','K14','RS Wirosaban','0274371195','Jl.Ki Ageng Pemanahan No.1', 'RSWirosaban@gmail.com'  FROM dual UNION ALL 
-  select 'PL8','JP1','K15','RS Martha Friska Medan','0614149666','Jl.Multatuli No.1', 'RSMarthaFriskaMedan@gmail.com'  FROM dual UNION ALL 
-  select 'PL9','JP1','K21','RS Myria','0711411610','Jl.Kol. H. Burlian No.228', 'RSMyria@gmail.com'  FROM dual UNION ALL 
-  select 'PL10','JP1','K23','RS Yarsi','0561739685','Jl.Tanjung Raya II', 'RSYarsi@gmail.com'  FROM dual UNION ALL 
-  select 'PL11','JP1','K28','RS Balikpapan Baru','0542870330','Jl.Mohammad T. Haryono', 'RSBalikpapanBaru@gmail.com'  FROM dual UNION ALL 
-  select 'PL12','JP1','K34','RS Pelamonia','08111782399','Jl.Jend. Sudirman No.27', 'RSPelamonia@gmail.com'  FROM dual UNION ALL 
-  select 'PL13','JP1','K38','RS Abunawas','04017926150','Jl.Z.A. Sugianto No. 39', 'RSAbunawas@gmail.com'  FROM dual UNION ALL 
-  select 'PL14','JP1','K39','RS dr.Agung','037443166','Jl.Ir Sutami No.1, Rabadompu Bar', 'RSdr.Agung@gmail.com'  FROM dual UNION ALL 
-  select 'PL15','JP1','K4','RS Sahabat','03436743777','Jl.Raya Surabaya - Malang No.KM', 'RSSahabat.Agung@gmail.com'  FROM dual UNION ALL 
-  select 'PL16','JP2','K1','Kantor Walikota Surabaya','0315312144','Jl.Taman Surya No.1, Ketabang', 'KWSurabaya@gmail.com'  FROM dual UNION ALL 
-  select 'PL17','JP2','K1','Kantor Gubernur Jawa Timur','0315247145','Jl.Pahlawan No.110', 'KGJawaTimur@gmail.com'  FROM dual UNION ALL 
-  select 'PL18','JP2','K13','Kantor Walikota Jakarta Pusat','0213502575','Jl.Tanah Abang I No.1', 'KWJakartaPusat@gmail.com'  FROM dual UNION ALL 
-  select 'PL19','JP2','K13','Kantor Gubernur Jakarta','0213504810','Jl.Medan Merdeka Sel. No.8-9', 'KGJakarta@gmail.com'  FROM dual UNION ALL 
-  select 'PL20','JP2','K14','Kantor Walikota Yogyakarta','0274514448','Jl.Kenari No.56', 'KWYogyakarta@gmail.com'  FROM dual UNION ALL 
-  select 'PL21','JP2','K14','Kantor Gubernur Yogyakarta','562811','Jl.Malioboro No.16, Suryatmajan', 'KGYogyakarta@gmail.com'  FROM dual UNION ALL 
-  select 'PL22','JP2','K21','Kantor Gubernur Sumatera Selatan','0711352388','Jl.Kapten A. Rivai No.3', 'KGSumateraSelatan@gmail.com'  FROM dual UNION ALL 
-  select 'PL23','JP2','K21','Kantor Walikota Palembang','0711352695','Jl.Merdeka No.1', 'KWPalembang@gmail.com'  FROM dual UNION ALL 
-  select 'PL24','JP2','K28','Kantor Walikota Balikpapan','0542421500','Jl.Jenderal Sudirman No.1', 'KWBalikpapan@gmail.com'  FROM dual UNION ALL 
-  select 'PL25','JP3','K11','Toko konoj','086921986164','Jl.tojeqija xahuy no.14', 'konoj892@gmail.com'  FROM dual UNION ALL 
-  select 'PL26','JP3','K38','Toko sutafo sufoqic','081159441816','Jl.hepugeteko no.49', 'sutafo582@gmail.com'  FROM dual UNION ALL 
-  select 'PL27','JP3','K34','Toko zoci xeco','088654176986','Jl.koqiledihe qudufoc no.5', 'zoci993@gmail.com'  FROM dual UNION ALL 
-  select 'PL28','JP3','K18','Toko moyoguf yadajis','082747752786','Jl.horegaliqu no.80', 'moyoguf567@gmail.com'  FROM dual UNION ALL 
-  select 'PL29','JP3','K39','Toko zoti muki','083300145264','Jl.valedanawi bofoxapura no.74', 'zoti45@gmail.com'  FROM dual UNION ALL 
-  select 'PL30','JP3','K35','Toko kimiqi rudela','088670047441','Jl.somaquce no.54', 'kimiqi814@gmail.com'  FROM dual UNION ALL 
-  select 'PL31','JP3','K4','Toko zoyola vibevid','083689955404','Jl.nerecaroz desarax no.57', 'zoyola11@gmail.com'  FROM dual UNION ALL 
-  select 'PL32','JP3','K40','Toko humiqok','088299483731','Jl.wodiyaq no.90', 'humiqok365@gmail.com'  FROM dual UNION ALL 
-  select 'PL33','JP3','K41','Toko mivulud','088318440230','Jl.colazes no.74', 'mivulud568@gmail.com'  FROM dual UNION ALL 
-  select 'PL34','JP3','K29','Toko suxiga bocimin','085335888839','Jl.duwucelu no.72', 'suxiga868@gmail.com'  FROM dual UNION ALL 
-  select 'PL35','JP3','K24','Toko sepoti','088350501806','Jl.xorukedifi xerunu no.14', 'sepoti248@gmail.com'  FROM dual UNION ALL 
-  select 'PL36','JP3','K14','Toko hojeq picelu','085978532132','Jl.kamuco no.95', 'hojeq447@gmail.com'  FROM dual UNION ALL 
-  select 'PL37','JP3','K5','Toko qobo','085550284702','Jl.bukuna no.87', 'qobo663@gmail.com'  FROM dual UNION ALL 
-  select 'PL38','JP3','K27','Toko ruxora','087794695330','Jl.lucogaxu nademehet no.56', 'ruxora847@gmail.com'  FROM dual UNION ALL 
-  select 'PL39','JP3','K18','Toko cuhof jafifij','089917644302','Jl.qenezedu vuwer no.71', 'cuhof528@gmail.com'  FROM dual UNION ALL 
-  select 'PL40','JP3','K18','Toko moxapev','081863483908','Jl.rociviniho zilar no.27', 'moxapev779@gmail.com'  FROM dual UNION ALL 
-  select 'PL41','JP3','K9','Toko dikozo godasol','080583394464','Jl.lulemavite loyazoco no.26', 'dikozo783@gmail.com'  FROM dual UNION ALL 
-  select 'PL42','JP3','K35','Toko mogirag','089275833517','Jl.gevosofop no.28', 'mogirag457@gmail.com'  FROM dual UNION ALL 
-  select 'PL43','JP3','K15','Toko poyagit bagaloq','081892069049','Jl.paxijajaju no.2', 'poyagit165@gmail.com'  FROM dual UNION ALL 
-  select 'PL44','JP3','K24','Toko yuhayoc','083905268278','Jl.foxisi titunopa no.17', 'yuhayoc902@gmail.com'  FROM dual UNION ALL 
-  select 'PL45','JP3','K31','Toko zuma xobetuw','089525264618','Jl.jaxinoyoz no.49', 'zuma145@gmail.com'  FROM dual UNION ALL 
-  select 'PL46','JP3','K39','Toko laxeden','083951830517','Jl.yelefop no.21', 'laxeden903@gmail.com'  FROM dual UNION ALL 
-  select 'PL47','JP3','K12','Toko hebakeq','080627500596','Jl.qipalu no.40', 'hebakeq928@gmail.com'  FROM dual UNION ALL 
-  select 'PL48','JP3','K41','Toko bayoyid xatali','083056952587','Jl.diqurereh nusuj no.3', 'bayoyid704@gmail.com'  FROM dual UNION ALL 
-  select 'PL49','JP3','K27','Toko yexo','088013029468','Jl.kalagukoqa rasugu no.38', 'yexo139@gmail.com'  FROM dual UNION ALL 
-  select 'PL50','JP3','K40','Toko qenema telasuj','089620325304','Jl.zicaq reyoxopu no.32', 'qenema548@gmail.com'  FROM dual UNION ALL 
-  select 'PL51','JP3','K24','Toko fori yeke','082103122052','Jl.wepome no.94', 'fori138@gmail.com'  FROM dual UNION ALL 
-  select 'PL52','JP3','K25','Toko kejuso jinine','080965166596','Jl.fafamu tubaruju no.39', 'kejuso261@gmail.com'  FROM dual UNION ALL 
-  select 'PL53','JP3','K6','Toko fovugor quho','081379059492','Jl.kiziw no.33', 'fovugor764@gmail.com'  FROM dual UNION ALL 
-  select 'PL54','JP3','K5','Toko wudehod xawal','089554988309','Jl.xibaqo no.26', 'wudehod450@gmail.com'  FROM dual UNION ALL 
-  select 'PL55','JP3','K20','Toko vukaqi vitewis','089630055402','Jl.lulefihoqi no.2', 'vukaqi762@gmail.com'  FROM dual UNION ALL 
-  select 'PL56','JP3','K4','Toko netuke xoma','088087466981','Jl.bonuw cewena no.34', 'netuke994@gmail.com'  FROM dual UNION ALL 
-  select 'PL57','JP3','K23','Toko vajom jigot','083626089843','Jl.zeqidacabi dakikokel no.44', 'vajom511@gmail.com'  FROM dual UNION ALL 
-  select 'PL58','JP3','K1','Toko lanume peme','089875864608','Jl.penek yakago no.85', 'lanume267@gmail.com'  FROM dual UNION ALL 
-  select 'PL59','JP3','K17','Toko jojeh','088931160028','Jl.xapehanu wofepi no.44', 'jojeh547@gmail.com'  FROM dual UNION ALL 
-  select 'PL60','JP3','K37','Toko wucaxig vezeguj','083264783757','Jl.motutunoh no.21', 'wucaxig15@gmail.com'  FROM dual UNION ALL 
-  select 'PL61','JP4','K13','diqu','082855666278','Jl.zobodo no.96', 'diqu516@gmail.com'  FROM dual UNION ALL 
-  select 'PL62','JP4','K19','gimoloh','086161448094','Jl.fejufusow wirobiqi no.35', 'gimoloh826@gmail.com'  FROM dual UNION ALL 
-  select 'PL63','JP4','K30','sipuyav yufok jamen','088641807891','Jl.tehat no.80', 'sipuyav25@gmail.com'  FROM dual UNION ALL 
-  select 'PL64','JP4','K10','rugu feta','088985895629','Jl.cugivudomo no.16', 'rugu493@gmail.com'  FROM dual UNION ALL 
-  select 'PL65','JP4','K14','hoyiret dijapaz wefuye','084904701326','Jl.teviveninu no.6', 'hoyiret170@gmail.com'  FROM dual UNION ALL 
-  select 'PL66','JP4','K14','qapixo','082246833088','Jl.himeneki no.42', 'qapixo108@gmail.com'  FROM dual UNION ALL 
-  select 'PL67','JP4','K2','kupi','087227389269','Jl.pohesudi no.85', 'kupi309@gmail.com'  FROM dual UNION ALL 
-  select 'PL68','JP4','K32','defigun','087412147077','Jl.xicecot komih no.4', 'defigun145@gmail.com'  FROM dual UNION ALL 
-  select 'PL69','JP4','K5','yawu','081126478474','Jl.dosof quyuza no.48', 'yawu572@gmail.com'  FROM dual UNION ALL 
-  select 'PL70','JP4','K23','zilo dudi','086228174966','Jl.ticay heyijigeq no.28', 'zilo950@gmail.com'  FROM dual UNION ALL 
-  select 'PL71','JP4','K14','wiquto cisal menu','080730981218','Jl.vixibiloru luxageco no.94', 'wiquto860@gmail.com'  FROM dual UNION ALL 
-  select 'PL72','JP4','K39','nafisi sutofe','086641592843','Jl.yesad no.46', 'nafisi344@gmail.com'  FROM dual UNION ALL 
-  select 'PL73','JP4','K19','hajaca zazusoq ruco','080270928308','Jl.raravalok no.58', 'hajaca761@gmail.com'  FROM dual UNION ALL 
-  select 'PL74','JP4','K22','yece kaziwu','089790855238','Jl.wuvire no.30', 'yece365@gmail.com'  FROM dual UNION ALL 
-  select 'PL75','JP4','K36','ceha feliz beni','083999584016','Jl.xekafefepi jifipe no.16', 'ceha162@gmail.com'  FROM dual UNION ALL 
-  select 'PL76','JP4','K36','kelu','089749536162','Jl.hazufotek jekakigi no.35', 'kelu668@gmail.com'  FROM dual UNION ALL 
-  select 'PL77','JP4','K17','viye nuhinun nulodu','083689390149','Jl.leduz xegaqica no.49', 'viye206@gmail.com'  FROM dual UNION ALL 
-  select 'PL78','JP4','K20','rehebo salaxe','085857160458','Jl.gusawu ranuwofe no.94', 'rehebo590@gmail.com'  FROM dual UNION ALL 
-  select 'PL79','JP4','K15','qanag lusikiw vuza','086087656127','Jl.gidonejime fihinikeli no.79', 'qanag29@gmail.com'  FROM dual UNION ALL 
-  select 'PL80','JP4','K22','bope lohoxu','082510831428','Jl.ceregepo ruhile no.33', 'bope896@gmail.com'  FROM dual UNION ALL 
-  select 'PL81','JP4','K20','xosil yebikiy vetutap','086575971636','Jl.mohoku juqocexeb no.42', 'xosil25@gmail.com'  FROM dual UNION ALL 
-  select 'PL82','JP4','K18','geqade','087430070116','Jl.seqapuzole balacuya no.20', 'geqade794@gmail.com'  FROM dual UNION ALL 
-  select 'PL83','JP4','K17','fibofih','082913991341','Jl.kitela lekidare no.62', 'fibofih926@gmail.com'  FROM dual UNION ALL 
-  select 'PL84','JP4','K25','pube vomeg foqeqah','080757440359','Jl.zehamamifi bucuhisare no.93', 'pube450@gmail.com'  FROM dual UNION ALL 
-  select 'PL85','JP4','K2','fenar xijiya','087810134305','Jl.nihihopu fixenulam no.55', 'fenar227@gmail.com'  FROM dual UNION ALL 
-  select 'PL86','JP4','K3','nile kebex kayayip','081142542959','Jl.honopepogu qusobalive no.28', 'nile791@gmail.com'  FROM dual UNION ALL 
-  select 'PL87','JP4','K5','cubi mipelaf nagiwi','084008634895','Jl.mosigeqozi qopifevih no.24', 'cubi377@gmail.com'  FROM dual UNION ALL 
-  select 'PL88','JP4','K35','sepa jufizu','089097203039','Jl.vipeseze wikeyeji no.74', 'sepa239@gmail.com'  FROM dual UNION ALL 
-  select 'PL89','JP4','K10','xogabit mamubib','086100284547','Jl.veyakez no.82', 'xogabit877@gmail.com'  FROM dual UNION ALL 
-  select 'PL90','JP4','K20','yutix vajux medis','087976922559','Jl.cequsegum no.49', 'yutix625@gmail.com'  FROM dual UNION ALL 
-  select 'PL91','JP4','K1','tuxi xovahem','085970086017','Jl.fumoqox mogesazazi no.63', 'tuxi231@gmail.com'  FROM dual UNION ALL 
-  select 'PL92','JP4','K21','zilo wucusas katug','089219173934','Jl.boqonadu no.17', 'zilo159@gmail.com'  FROM dual UNION ALL 
-  select 'PL93','JP4','K29','lazo pesoqe wizuru','083168959594','Jl.hojexonet no.4', 'lazo820@gmail.com'  FROM dual UNION ALL 
-  select 'PL94','JP4','K35','buno','086081970574','Jl.riwica gaxezebid no.10', 'buno109@gmail.com'  FROM dual UNION ALL 
-  select 'PL95','JP4','K38','nazo yokube dezim','085946979494','Jl.naliki tibelemawu no.82', 'nazo570@gmail.com'  FROM dual UNION ALL 
-  select 'PL96','JP4','K13','disaq relotid fipano','082385063093','Jl.yapefeb hovuy no.29', 'disaq674@gmail.com'  FROM dual UNION ALL 
-  select 'PL97','JP4','K39','noyekot beye','086388585867','Jl.suzah no.81', 'noyekot177@gmail.com'  FROM dual UNION ALL 
-  select 'PL98','JP4','K9','megezin bare','080427397576','Jl.yiciwuv no.77', 'megezin439@gmail.com'  FROM dual UNION ALL 
-  select 'PL99','JP4','K21','gasabod voru','080219101216','Jl.xaqifaja fulisefap no.63', 'gasabod977@gmail.com'  FROM dual UNION ALL 
-  select 'PL100','JP4','K36','nofegen','088717835797','Jl.zedonizu no.9', 'nofegen971@gmail.com'  FROM dual UNION ALL 
-  select 'PL101','JP4','K1','faye','080639587726','Jl.vohilir no.1', 'faye354@gmail.com'  FROM dual UNION ALL 
-  select 'PL102','JP4','K32','jicod dobo','080400706842','Jl.vecej no.22', 'jicod881@gmail.com'  FROM dual UNION ALL 
-  select 'PL103','JP4','K22','jiva wivukal podez','083349887696','Jl.jijiqiralo fegesodoso no.53', 'jiva16@gmail.com'  FROM dual UNION ALL 
-  select 'PL104','JP4','K35','jabe','084462163112','Jl.sagicazuc no.68', 'jabe249@gmail.com'  FROM dual UNION ALL 
-  select 'PL105','JP4','K18','raberaz lanadag honeg','086609058508','Jl.xurowulequ mikel no.2', 'raberaz429@gmail.com'  FROM dual UNION ALL 
-  select 'PL106','JP4','K18','qukobo dutuyiy xaduqax','085144878253','Jl.fabuja no.97', 'qukobo79@gmail.com'  FROM dual UNION ALL 
-  select 'PL107','JP4','K40','hexum worexex','080808230593','Jl.hediwud no.89', 'hexum437@gmail.com'  FROM dual UNION ALL 
-  select 'PL108','JP4','K13','feho fovaki radul','085420758109','Jl.lagul nixohuy no.15', 'feho690@gmail.com'  FROM dual UNION ALL 
-  select 'PL109','JP4','K2','logiq dequfom panil','086385550636','Jl.xifil no.33', 'logiq795@gmail.com'  FROM dual UNION ALL 
-  select 'PL110','JP4','K27','laxe memaku','089833658565','Jl.girewayu no.44', 'laxe136@gmail.com'  FROM dual UNION ALL 
-  select 'PL111','JP4','K36','pebar nasoz','086643555332','Jl.zegugudov no.44', 'pebar280@gmail.com'  FROM dual UNION ALL 
-  select 'PL112','JP4','K36','rigabin puzumuk','080119122251','Jl.jasodicum turor no.66', 'rigabin23@gmail.com'  FROM dual UNION ALL 
-  select 'PL113','JP4','K4','gebub xuquxey','087203163632','Jl.xezukaja mudewile no.43', 'gebub98@gmail.com'  FROM dual UNION ALL 
-  select 'PL114','JP4','K2','jujaw hugoku betuvu','086970066803','Jl.gafeh no.58', 'jujaw52@gmail.com'  FROM dual UNION ALL 
-  select 'PL115','JP4','K1','kovil','089496918687','Jl.tozape yavohima no.88', 'kovil606@gmail.com'  FROM dual UNION ALL 
-  select 'PL116','JP4','K1','gixibur kadey wuxeni','086563894355','Jl.rasig no.97', 'gixibur261@gmail.com'  FROM dual UNION ALL 
-  select 'PL117','JP4','K41','woba riduje','089873563385','Jl.huloyiwoyo no.53', 'woba35@gmail.com'  FROM dual UNION ALL 
-  select 'PL118','JP4','K2','lozogor gula','088530172088','Jl.kujuze no.92', 'lozogor700@gmail.com'  FROM dual UNION ALL 
-  select 'PL119','JP4','K24','naguxo civab','086095790495','Jl.babasat no.15', 'naguxo207@gmail.com'  FROM dual UNION ALL 
-  select 'PL120','JP4','K18','dihal humi','085896013677','Jl.hibela no.80', 'dihal833@gmail.com'  FROM dual UNION ALL 
-  select 'PL121','JP4','K30','jibon dece foyewaf','081573280152','Jl.ciripiniz lojoyuhiz no.74', 'jibon565@gmail.com'  FROM dual UNION ALL 
-  select 'PL122','JP4','K40','furuqi','086943966242','Jl.wawogeco no.31', 'furuqi741@gmail.com'  FROM dual UNION ALL 
-  select 'PL123','JP4','K11','zaxad maribot foteset','088420765420','Jl.rihawagu kacise no.90', 'zaxad239@gmail.com'  FROM dual UNION ALL 
-  select 'PL124','JP4','K20','coparo zura','087614590634','Jl.torofenoya no.62', 'coparo948@gmail.com'  FROM dual UNION ALL 
-  select 'PL125','JP4','K12','deyeb boji sekerom','086509236099','Jl.fefogicat tupuki no.65', 'deyeb582@gmail.com'  FROM dual UNION ALL 
-  select 'PL126','JP4','K27','bota','089066129151','Jl.yutufaquj lerabebi no.74', 'bota763@gmail.com'  FROM dual UNION ALL 
-  select 'PL127','JP4','K25','yofuj hikasez dadogor','088170273965','Jl.pihiqihel no.95', 'yofuj347@gmail.com'  FROM dual UNION ALL 
-  select 'PL128','JP4','K18','bazapa','085895260100','Jl.rimewasa qociyi no.27', 'bazapa556@gmail.com'  FROM dual UNION ALL 
-  select 'PL129','JP4','K32','kofip sopa fodukuc','089553607210','Jl.zofixufilo no.99', 'kofip156@gmail.com'  FROM dual UNION ALL 
-  select 'PL130','JP4','K13','detebe dobumep','089805487875','Jl.hodaf fowozoko no.1', 'detebe629@gmail.com'  FROM dual UNION ALL 
-  select 'PL131','JP4','K10','pime riwibez zibokuf','081684250448','Jl.cosoku no.43', 'pime729@gmail.com'  FROM dual UNION ALL 
-  select 'PL132','JP4','K2','ruris mucexun','089919247489','Jl.nafawefig saruhej no.70', 'ruris247@gmail.com'  FROM dual UNION ALL 
-  select 'PL133','JP4','K5','jeye cowoteq','086801126481','Jl.julezepida no.68', 'jeye875@gmail.com'  FROM dual UNION ALL 
-  select 'PL134','JP4','K21','gurumo nulona','080697181239','Jl.muboga nusigaroco no.11', 'gurumo937@gmail.com'  FROM dual UNION ALL 
-  select 'PL135','JP4','K42','lerax','083705262290','Jl.xowidozug no.84', 'lerax803@gmail.com'  FROM dual UNION ALL 
-  select 'PL136','JP4','K42','xocu lojawez kacuyu','085610231862','Jl.piqidaqa hefuhud no.70', 'xocu106@gmail.com'  FROM dual UNION ALL 
-  select 'PL137','JP4','K16','goboy','084730460373','Jl.rirapiy no.24', 'goboy173@gmail.com'  FROM dual UNION ALL 
-  select 'PL138','JP4','K13','nozux siyuyas zavipi','086236086555','Jl.samoforuz no.18', 'nozux198@gmail.com'  FROM dual UNION ALL 
-  select 'PL139','JP4','K41','moroveq fubi','089808781581','Jl.xowemix no.79', 'moroveq455@gmail.com'  FROM dual UNION ALL 
-  select 'PL140','JP4','K2','lifawix','087279694718','Jl.kodopid nunuyuwege no.77', 'lifawix638@gmail.com'  FROM dual UNION ALL 
-  select 'PL141','JP4','K2','junej','089045319599','Jl.tasizu zabozida no.20', 'junej424@gmail.com'  FROM dual UNION ALL 
-  select 'PL142','JP4','K39','qofa','086221548229','Jl.hezak no.65', 'qofa879@gmail.com'  FROM dual UNION ALL 
-  select 'PL143','JP4','K10','tegose kame lapihes','084120214180','Jl.rejoyiro no.98', 'tegose267@gmail.com'  FROM dual UNION ALL 
-  select 'PL144','JP4','K19','jazu','088651767289','Jl.xakecebodu no.84', 'jazu609@gmail.com'  FROM dual UNION ALL 
-  select 'PL145','JP4','K24','zebom poyute','083774602303','Jl.pivisujul letela no.67', 'zebom571@gmail.com'  FROM dual UNION ALL 
-  select 'PL146','JP4','K15','memiyal sami','081561508425','Jl.rahuhogud raxavif no.99', 'memiyal564@gmail.com'  FROM dual UNION ALL 
-  select 'PL147','JP4','K23','teres votuza','084575917020','Jl.deceliyahi pagaxevexu no.75', 'teres832@gmail.com'  FROM dual UNION ALL 
-  select 'PL148','JP4','K39','nige vepuhap','089763824481','Jl.cekowaviro no.78', 'nige785@gmail.com'  FROM dual UNION ALL 
-  select 'PL149','JP4','K36','leyiyi','085800105420','Jl.fupixul vosemur no.54', 'leyiyi887@gmail.com'  FROM dual UNION ALL 
-  select 'PL150','JP4','K30','meqefus xoqavuf weto','083522717849','Jl.nohixoq no.37', 'meqefus922@gmail.com'  FROM dual UNION ALL 
-  select 'PL151','JP4','K17','sufiv nuyi','083902993954','Jl.wodoq no.75', 'sufiv928@gmail.com'  FROM dual UNION ALL 
-  select 'PL152','JP4','K40','qeyez haku bawib','086752023768','Jl.pajija no.71', 'qeyez796@gmail.com'  FROM dual UNION ALL 
-  select 'PL153','JP4','K32','pucone josil','086634616370','Jl.demamunox hiqecebo no.93', 'pucone533@gmail.com'  FROM dual UNION ALL 
-  select 'PL154','JP4','K26','notevo jibez','080765701044','Jl.kaqira no.36', 'notevo872@gmail.com'  FROM dual UNION ALL 
-  select 'PL155','JP4','K6','guzum','084036259276','Jl.yoqupa no.7', 'guzum156@gmail.com'  FROM dual UNION ALL 
-  select 'PL156','JP4','K42','xariwo yaqo','082302658270','Jl.cajira no.81', 'xariwo147@gmail.com'  FROM dual UNION ALL 
-  select 'PL157','JP4','K14','vusoj xagufuf jihiway','087674097751','Jl.lubep diboyigel no.45', 'vusoj608@gmail.com'  FROM dual UNION ALL 
-  select 'PL158','JP4','K31','bifawu','088466906275','Jl.jiviki no.24', 'bifawu792@gmail.com'  FROM dual UNION ALL 
-  select 'PL159','JP4','K2','mirayav fulefe','083002511730','Jl.baniyowuyo mumilo no.5', 'mirayav647@gmail.com'  FROM dual UNION ALL 
-  select 'PL160','JP4','K17','furey','084507602337','Jl.wiqohe no.87', 'furey762@gmail.com'  FROM dual UNION ALL 
-  select 'PL161','JP4','K28','qobul soqol kilaro','088641265546','Jl.tudifakaqa joyasexiq no.35', 'qobul470@gmail.com'  FROM dual UNION ALL 
-  select 'PL162','JP4','K23','golelu','084615209433','Jl.picexiqop no.15', 'golelu959@gmail.com'  FROM dual UNION ALL 
-  select 'PL163','JP4','K36','yulahe','087292247273','Jl.luheh no.5', 'yulahe409@gmail.com'  FROM dual UNION ALL 
-  select 'PL164','JP4','K1','vasi yomepeh wiyaxuf','087082315815','Jl.xuralohixi lameji no.24', 'vasi608@gmail.com'  FROM dual UNION ALL 
-  select 'PL165','JP4','K32','deloru fuvegel yesu','080674411418','Jl.huboh haciwobeco no.66', 'deloru946@gmail.com'  FROM dual UNION ALL 
-  select 'PL166','JP4','K20','yesifiy dojuqem','086585239316','Jl.sewokiwew soherorici no.55', 'yesifiy318@gmail.com'  FROM dual UNION ALL 
-  select 'PL167','JP4','K23','qiyefa paleti selox','084479922987','Jl.padayute no.29', 'qiyefa573@gmail.com'  FROM dual UNION ALL 
-  select 'PL168','JP4','K8','razol kezomo','082104401070','Jl.zedup fejudebac no.50', 'razol506@gmail.com'  FROM dual UNION ALL 
-  select 'PL169','JP4','K34','kiseko maloy tabora','088798324138','Jl.qeyupeso rononaseyi no.23', 'kiseko17@gmail.com'  FROM dual UNION ALL 
-  select 'PL170','JP4','K19','wedey bogu boleno','081836841630','Jl.boxihalamu no.81', 'wedey885@gmail.com'  FROM dual UNION ALL 
-  select 'PL171','JP4','K5','kuhuyu pubiki sorepik','089816890147','Jl.ligotapupu nefigexok no.68', 'kuhuyu84@gmail.com'  FROM dual UNION ALL 
-  select 'PL172','JP4','K18','fagu','082811870148','Jl.fuyof zofehixam no.83', 'fagu455@gmail.com'  FROM dual UNION ALL 
-  select 'PL173','JP4','K38','wawurub moxol','087467825693','Jl.sasososin puxojipi no.35', 'wawurub655@gmail.com'  FROM dual UNION ALL 
-  select 'PL174','JP4','K33','radij xenido','086799781501','Jl.tofiq xafavuqor no.78', 'radij393@gmail.com'  FROM dual UNION ALL 
-  select 'PL175','JP4','K2','sabuja refi','086676077904','Jl.kadoka pazapi no.97', 'sabuja435@gmail.com'  FROM dual UNION ALL 
-  select 'PL176','JP4','K32','kido savij jaqi','088012169988','Jl.zafepa paged no.90', 'kido385@gmail.com'  FROM dual UNION ALL 
-  select 'PL177','JP4','K3','riyihu','081693248807','Jl.zabevaz no.11', 'riyihu642@gmail.com'  FROM dual UNION ALL 
-  select 'PL178','JP4','K32','qasa','084658887703','Jl.voseb hixole no.59', 'qasa826@gmail.com'  FROM dual UNION ALL 
-  select 'PL179','JP4','K35','jiga jugowu barig','084763040518','Jl.vijiva vetozurulu no.96', 'jiga887@gmail.com'  FROM dual UNION ALL 
-  select 'PL180','JP4','K42','zonim kunorug woze','081211736776','Jl.hodafale jasabuzote no.14', 'zonim458@gmail.com'  FROM dual UNION ALL 
-  select 'PL181','JP4','K21','xusapas jisawi bujene','084165317592','Jl.qodamot no.42', 'xusapas198@gmail.com'  FROM dual UNION ALL 
-  select 'PL182','JP4','K30','zekawo sire rikiqe','087697236177','Jl.mutuhabe gefavo no.17', 'zekawo627@gmail.com'  FROM dual UNION ALL 
-  select 'PL183','JP4','K25','hecejom xeti xuzuwa','088446973551','Jl.gopifok no.94', 'hecejom991@gmail.com'  FROM dual UNION ALL 
-  select 'PL184','JP4','K13','vuqozi sifum benoma','086653321923','Jl.yizomebava no.38', 'vuqozi75@gmail.com'  FROM dual UNION ALL 
-  select 'PL185','JP4','K32','lifepu','082210728325','Jl.pafujenoc no.11', 'lifepu333@gmail.com'  FROM dual UNION ALL 
-  select 'PL186','JP4','K15','jodin xitami','083851900179','Jl.qosil no.67', 'jodin639@gmail.com'  FROM dual UNION ALL 
-  select 'PL187','JP4','K37','cafiqan gede','086981328334','Jl.fuden no.64', 'cafiqan838@gmail.com'  FROM dual UNION ALL 
-  select 'PL188','JP4','K25','dizo pizi votiz','084608859310','Jl.zocujis zavuzi no.3', 'dizo12@gmail.com'  FROM dual UNION ALL 
-  select 'PL189','JP4','K37','kana rowez modoh','089739114678','Jl.jinayikoga nuvol no.15', 'kana15@gmail.com'  FROM dual UNION ALL 
-  select 'PL190','JP4','K42','yafokip wuyahe reqasa','086813422399','Jl.nojusik no.29', 'yafokip59@gmail.com'  FROM dual UNION ALL 
-  select 'PL191','JP4','K12','hoqu','083268954573','Jl.gogicog no.2', 'hoqu636@gmail.com'  FROM dual UNION ALL 
-  select 'PL192','JP4','K24','jukoxip zuwa','088996557059','Jl.bedohix riseku no.5', 'jukoxip850@gmail.com'  FROM dual UNION ALL 
-  select 'PL193','JP4','K30','qejec bawexi','081847633465','Jl.qokiti bequni no.0', 'qejec400@gmail.com'  FROM dual UNION ALL 
-  select 'PL194','JP4','K25','qudo quju','080493295615','Jl.liqewo no.60', 'qudo12@gmail.com'  FROM dual UNION ALL 
-  select 'PL195','JP4','K3','soyox zata','085100657770','Jl.fujoxih no.45', 'soyox975@gmail.com'  FROM dual UNION ALL 
-  select 'PL196','JP4','K24','ralem','083495823230','Jl.litene fiwubegozi no.30', 'ralem440@gmail.com'  FROM dual UNION ALL 
-  select 'PL197','JP4','K10','hipa','087985946899','Jl.vuday wixojari no.48', 'hipa126@gmail.com'  FROM dual UNION ALL 
-  select 'PL198','JP4','K13','ziha','083079751306','Jl.jizij no.76', 'ziha642@gmail.com'  FROM dual UNION ALL 
-  select 'PL199','JP4','K7','qesude','089932306413','Jl.nefukivu biloyiyime no.14', 'qesude184@gmail.com'  FROM dual UNION ALL 
-  select 'PL200','JP4','K9','genigob fodul poduhok','084146391974','Jl.hosuwo no.80', 'genigob782@gmail.com'  FROM dual;
+INSERT INTO PELANGGAN (ID_PELANGGAN, ID_JENIS_PELANGGAN, ID_KABUPATEN, NAMA_PELANGGAN, TELEPON_PELANGGAN,ALAMAT_PELANGGAN, EMAIL_PELANGGAN) 
+  select 'PL1','JL1','K13','RS Islam Jakarta','0215732241','Jl.Jend. Sudirman No.Kav 49', 'RSIslamJakarta@gmail.com'  FROM dual UNION ALL
+  select 'PL2','JL1','K13','RS Harum Sisma Medika','0218617212','Jl.S. Kalimalang Tarum Barat', 'RSHarumSiskaMedika@gmail.com'  FROM dual UNION ALL
+  select 'PL3','JL1','K1','Medical Center ITS','0315927547','Jl.Arief Rahman Hakim No.213', 'MedCenITS@gmail.com'  FROM dual UNION ALL
+  select 'PL4','JL1','K1','RS Pura Raharja','0315019898','Jl.Pucang Adi No.12-14', 'RSPuraRaharja@gmail.com'  FROM dual UNION ALL
+  select 'PL5','JL1','K1','RS Premier Surabaya','0315993211','Jl.Nginden Intan Barat No.B', 'RSPremierSurabaya@gmail.com'  FROM dual UNION ALL
+  select 'PL6','JL1','K9','RS Azra Bogor','02518318456','Jl.Raya Pajajaran No.219', 'RSAzraBogor@gmail.com'  FROM dual UNION ALL
+  select 'PL7','JL1','K14','RS Wirosaban','0274371195','Jl.Ki Ageng Pemanahan No.1', 'RSWirosaban@gmail.com'  FROM dual UNION ALL
+  select 'PL8','JL1','K15','RS Martha Friska Medan','0614149666','Jl.Multatuli No.1', 'RSMarthaFriskaMedan@gmail.com'  FROM dual UNION ALL
+  select 'PL9','JL1','K21','RS Myria','0711411610','Jl.Kol. H. Burlian No.228', 'RSMyria@gmail.com'  FROM dual UNION ALL
+  select 'PL10','JL1','K23','RS Yarsi','0561739685','Jl.Tanjung Raya II', 'RSYarsi@gmail.com'  FROM dual UNION ALL
+  select 'PL11','JL1','K28','RS Balikpapan Baru','0542870330','Jl.Mohammad T. Haryono', 'RSBalikpapanBaru@gmail.com'  FROM dual UNION ALL
+  select 'PL12','JL1','K34','RS Pelamonia','08111782399','Jl.Jend. Sudirman No.27', 'RSPelamonia@gmail.com'  FROM dual UNION ALL
+  select 'PL13','JL1','K38','RS Abunawas','04017926150','Jl.Z.A. Sugianto No. 39', 'RSAbunawas@gmail.com'  FROM dual UNION ALL
+  select 'PL14','JL1','K39','RS dr.Agung','037443166','Jl.Ir Sutami No.1, Rabadompu Bar', 'RSdr.Agung@gmail.com'  FROM dual UNION ALL
+  select 'PL15','JL1','K4','RS Sahabat','03436743777','Jl.Raya Surabaya - Malang No.KM', 'RSSahabat.Agung@gmail.com'  FROM dual UNION ALL
+  select 'PL16','JL2','K1','Kantor Walikota Surabaya','0315312144','Jl.Taman Surya No.1, Ketabang', 'KWSurabaya@gmail.com'  FROM dual UNION ALL
+  select 'PL17','JL2','K1','Kantor Gubernur Jawa Timur','0315247145','Jl.Pahlawan No.110', 'KGJawaTimur@gmail.com'  FROM dual UNION ALL
+  select 'PL18','JL2','K13','Kantor Walikota Jakarta Pusat','0213502575','Jl.Tanah Abang I No.1', 'KWJakartaPusat@gmail.com'  FROM dual UNION ALL
+  select 'PL19','JL2','K13','Kantor Gubernur Jakarta','0213504810','Jl.Medan Merdeka Sel. No.8-9', 'KGJakarta@gmail.com'  FROM dual UNION ALL
+  select 'PL20','JL2','K14','Kantor Walikota Yogyakarta','0274514448','Jl.Kenari No.56', 'KWYogyakarta@gmail.com'  FROM dual UNION ALL
+  select 'PL21','JL2','K14','Kantor Gubernur Yogyakarta','562811','Jl.Malioboro No.16, Suryatmajan', 'KGYogyakarta@gmail.com'  FROM dual UNION ALL
+  select 'PL22','JL2','K21','Kantor Gubernur Sumatera Selatan','0711352388','Jl.Kapten A. Rivai No.3', 'KGSumateraSelatan@gmail.com'  FROM dual UNION ALL
+  select 'PL23','JL2','K21','Kantor Walikota Palembang','0711352695','Jl.Merdeka No.1', 'KWPalembang@gmail.com'  FROM dual UNION ALL
+  select 'PL24','JL2','K28','Kantor Walikota Balikpapan','0542421500','Jl.Jenderal Sudirman No.1', 'KWBalikpapan@gmail.com'  FROM dual UNION ALL
+  select 'PL25','JL3','K11','Toko konoj','086921986164','Jl.tojeqija xahuy no.14', 'konoj892@gmail.com'  FROM dual UNION ALL
+  select 'PL26','JL3','K38','Toko sutafo sufoqic','081159441816','Jl.hepugeteko no.49', 'sutafo582@gmail.com'  FROM dual UNION ALL
+  select 'PL27','JL3','K34','Toko zoci xeco','088654176986','Jl.koqiledihe qudufoc no.5', 'zoci993@gmail.com'  FROM dual UNION ALL
+  select 'PL28','JL3','K18','Toko moyoguf yadajis','082747752786','Jl.horegaliqu no.80', 'moyoguf567@gmail.com'  FROM dual UNION ALL
+  select 'PL29','JL3','K39','Toko zoti muki','083300145264','Jl.valedanawi bofoxapura no.74', 'zoti45@gmail.com'  FROM dual UNION ALL
+  select 'PL30','JL3','K35','Toko kimiqi rudela','088670047441','Jl.somaquce no.54', 'kimiqi814@gmail.com'  FROM dual UNION ALL
+  select 'PL31','JL3','K4','Toko zoyola vibevid','083689955404','Jl.nerecaroz desarax no.57', 'zoyola11@gmail.com'  FROM dual UNION ALL
+  select 'PL32','JL3','K40','Toko humiqok','088299483731','Jl.wodiyaq no.90', 'humiqok365@gmail.com'  FROM dual UNION ALL
+  select 'PL33','JL3','K41','Toko mivulud','088318440230','Jl.colazes no.74', 'mivulud568@gmail.com'  FROM dual UNION ALL
+  select 'PL34','JL3','K29','Toko suxiga bocimin','085335888839','Jl.duwucelu no.72', 'suxiga868@gmail.com'  FROM dual UNION ALL
+  select 'PL35','JL3','K24','Toko sepoti','088350501806','Jl.xorukedifi xerunu no.14', 'sepoti248@gmail.com'  FROM dual UNION ALL
+  select 'PL36','JL3','K14','Toko hojeq picelu','085978532132','Jl.kamuco no.95', 'hojeq447@gmail.com'  FROM dual UNION ALL
+  select 'PL37','JL3','K5','Toko qobo','085550284702','Jl.bukuna no.87', 'qobo663@gmail.com'  FROM dual UNION ALL
+  select 'PL38','JL3','K27','Toko ruxora','087794695330','Jl.lucogaxu nademehet no.56', 'ruxora847@gmail.com'  FROM dual UNION ALL
+  select 'PL39','JL3','K18','Toko cuhof jafifij','089917644302','Jl.qenezedu vuwer no.71', 'cuhof528@gmail.com'  FROM dual UNION ALL
+  select 'PL40','JL3','K18','Toko moxapev','081863483908','Jl.rociviniho zilar no.27', 'moxapev779@gmail.com'  FROM dual UNION ALL
+  select 'PL41','JL3','K9','Toko dikozo godasol','080583394464','Jl.lulemavite loyazoco no.26', 'dikozo783@gmail.com'  FROM dual UNION ALL
+  select 'PL42','JL3','K35','Toko mogirag','089275833517','Jl.gevosofop no.28', 'mogirag457@gmail.com'  FROM dual UNION ALL
+  select 'PL43','JL3','K15','Toko poyagit bagaloq','081892069049','Jl.paxijajaju no.2', 'poyagit165@gmail.com'  FROM dual UNION ALL
+  select 'PL44','JL3','K24','Toko yuhayoc','083905268278','Jl.foxisi titunopa no.17', 'yuhayoc902@gmail.com'  FROM dual UNION ALL
+  select 'PL45','JL3','K31','Toko zuma xobetuw','089525264618','Jl.jaxinoyoz no.49', 'zuma145@gmail.com'  FROM dual UNION ALL
+  select 'PL46','JL3','K39','Toko laxeden','083951830517','Jl.yelefop no.21', 'laxeden903@gmail.com'  FROM dual UNION ALL
+  select 'PL47','JL3','K12','Toko hebakeq','080627500596','Jl.qipalu no.40', 'hebakeq928@gmail.com'  FROM dual UNION ALL
+  select 'PL48','JL3','K41','Toko bayoyid xatali','083056952587','Jl.diqurereh nusuj no.3', 'bayoyid704@gmail.com'  FROM dual UNION ALL
+  select 'PL49','JL3','K27','Toko yexo','088013029468','Jl.kalagukoqa rasugu no.38', 'yexo139@gmail.com'  FROM dual UNION ALL
+  select 'PL50','JL3','K40','Toko qenema telasuj','089620325304','Jl.zicaq reyoxopu no.32', 'qenema548@gmail.com'  FROM dual UNION ALL
+  select 'PL51','JL3','K24','Toko fori yeke','082103122052','Jl.wepome no.94', 'fori138@gmail.com'  FROM dual UNION ALL
+  select 'PL52','JL3','K25','Toko kejuso jinine','080965166596','Jl.fafamu tubaruju no.39', 'kejuso261@gmail.com'  FROM dual UNION ALL
+  select 'PL53','JL3','K6','Toko fovugor quho','081379059492','Jl.kiziw no.33', 'fovugor764@gmail.com'  FROM dual UNION ALL
+  select 'PL54','JL3','K5','Toko wudehod xawal','089554988309','Jl.xibaqo no.26', 'wudehod450@gmail.com'  FROM dual UNION ALL
+  select 'PL55','JL3','K20','Toko vukaqi vitewis','089630055402','Jl.lulefihoqi no.2', 'vukaqi762@gmail.com'  FROM dual UNION ALL
+  select 'PL56','JL3','K4','Toko netuke xoma','088087466981','Jl.bonuw cewena no.34', 'netuke994@gmail.com'  FROM dual UNION ALL
+  select 'PL57','JL3','K23','Toko vajom jigot','083626089843','Jl.zeqidacabi dakikokel no.44', 'vajom511@gmail.com'  FROM dual UNION ALL
+  select 'PL58','JL3','K1','Toko lanume peme','089875864608','Jl.penek yakago no.85', 'lanume267@gmail.com'  FROM dual UNION ALL
+  select 'PL59','JL3','K17','Toko jojeh','088931160028','Jl.xapehanu wofepi no.44', 'jojeh547@gmail.com'  FROM dual UNION ALL
+  select 'PL60','JL3','K37','Toko wucaxig vezeguj','083264783757','Jl.motutunoh no.21', 'wucaxig15@gmail.com'  FROM dual UNION ALL
+  select 'PL61','JL4','K13','diqu','082855666278','Jl.zobodo no.96', 'diqu516@gmail.com'  FROM dual UNION ALL
+  select 'PL62','JL4','K19','gimoloh','086161448094','Jl.fejufusow wirobiqi no.35', 'gimoloh826@gmail.com'  FROM dual UNION ALL
+  select 'PL63','JL4','K30','sipuyav yufok jamen','088641807891','Jl.tehat no.80', 'sipuyav25@gmail.com'  FROM dual UNION ALL
+  select 'PL64','JL4','K10','rugu feta','088985895629','Jl.cugivudomo no.16', 'rugu493@gmail.com'  FROM dual UNION ALL
+  select 'PL65','JL4','K14','hoyiret dijapaz wefuye','084904701326','Jl.teviveninu no.6', 'hoyiret170@gmail.com'  FROM dual UNION ALL
+  select 'PL66','JL4','K14','qapixo','082246833088','Jl.himeneki no.42', 'qapixo108@gmail.com'  FROM dual UNION ALL
+  select 'PL67','JL4','K2','kupi','087227389269','Jl.pohesudi no.85', 'kupi309@gmail.com'  FROM dual UNION ALL
+  select 'PL68','JL4','K32','defigun','087412147077','Jl.xicecot komih no.4', 'defigun145@gmail.com'  FROM dual UNION ALL
+  select 'PL69','JL4','K5','yawu','081126478474','Jl.dosof quyuza no.48', 'yawu572@gmail.com'  FROM dual UNION ALL
+  select 'PL70','JL4','K23','zilo dudi','086228174966','Jl.ticay heyijigeq no.28', 'zilo950@gmail.com'  FROM dual UNION ALL
+  select 'PL71','JL4','K14','wiquto cisal menu','080730981218','Jl.vixibiloru luxageco no.94', 'wiquto860@gmail.com'  FROM dual UNION ALL
+  select 'PL72','JL4','K39','nafisi sutofe','086641592843','Jl.yesad no.46', 'nafisi344@gmail.com'  FROM dual UNION ALL
+  select 'PL73','JL4','K19','hajaca zazusoq ruco','080270928308','Jl.raravalok no.58', 'hajaca761@gmail.com'  FROM dual UNION ALL
+  select 'PL74','JL4','K22','yece kaziwu','089790855238','Jl.wuvire no.30', 'yece365@gmail.com'  FROM dual UNION ALL
+  select 'PL75','JL4','K36','ceha feliz beni','083999584016','Jl.xekafefepi jifipe no.16', 'ceha162@gmail.com'  FROM dual UNION ALL
+  select 'PL76','JL4','K36','kelu','089749536162','Jl.hazufotek jekakigi no.35', 'kelu668@gmail.com'  FROM dual UNION ALL
+  select 'PL77','JL4','K17','viye nuhinun nulodu','083689390149','Jl.leduz xegaqica no.49', 'viye206@gmail.com'  FROM dual UNION ALL
+  select 'PL78','JL4','K20','rehebo salaxe','085857160458','Jl.gusawu ranuwofe no.94', 'rehebo590@gmail.com'  FROM dual UNION ALL
+  select 'PL79','JL4','K15','qanag lusikiw vuza','086087656127','Jl.gidonejime fihinikeli no.79', 'qanag29@gmail.com'  FROM dual UNION ALL
+  select 'PL80','JL4','K22','bope lohoxu','082510831428','Jl.ceregepo ruhile no.33', 'bope896@gmail.com'  FROM dual UNION ALL
+  select 'PL81','JL4','K20','xosil yebikiy vetutap','086575971636','Jl.mohoku juqocexeb no.42', 'xosil25@gmail.com'  FROM dual UNION ALL
+  select 'PL82','JL4','K18','geqade','087430070116','Jl.seqapuzole balacuya no.20', 'geqade794@gmail.com'  FROM dual UNION ALL
+  select 'PL83','JL4','K17','fibofih','082913991341','Jl.kitela lekidare no.62', 'fibofih926@gmail.com'  FROM dual UNION ALL
+  select 'PL84','JL4','K25','pube vomeg foqeqah','080757440359','Jl.zehamamifi bucuhisare no.93', 'pube450@gmail.com'  FROM dual UNION ALL
+  select 'PL85','JL4','K2','fenar xijiya','087810134305','Jl.nihihopu fixenulam no.55', 'fenar227@gmail.com'  FROM dual UNION ALL
+  select 'PL86','JL4','K3','nile kebex kayayip','081142542959','Jl.honopepogu qusobalive no.28', 'nile791@gmail.com'  FROM dual UNION ALL
+  select 'PL87','JL4','K5','cubi mipelaf nagiwi','084008634895','Jl.mosigeqozi qopifevih no.24', 'cubi377@gmail.com'  FROM dual UNION ALL
+  select 'PL88','JL4','K35','sepa jufizu','089097203039','Jl.vipeseze wikeyeji no.74', 'sepa239@gmail.com'  FROM dual UNION ALL
+  select 'PL89','JL4','K10','xogabit mamubib','086100284547','Jl.veyakez no.82', 'xogabit877@gmail.com'  FROM dual UNION ALL
+  select 'PL90','JL4','K20','yutix vajux medis','087976922559','Jl.cequsegum no.49', 'yutix625@gmail.com'  FROM dual UNION ALL
+  select 'PL91','JL4','K1','tuxi xovahem','085970086017','Jl.fumoqox mogesazazi no.63', 'tuxi231@gmail.com'  FROM dual UNION ALL
+  select 'PL92','JL4','K21','zilo wucusas katug','089219173934','Jl.boqonadu no.17', 'zilo159@gmail.com'  FROM dual UNION ALL
+  select 'PL93','JL4','K29','lazo pesoqe wizuru','083168959594','Jl.hojexonet no.4', 'lazo820@gmail.com'  FROM dual UNION ALL
+  select 'PL94','JL4','K35','buno','086081970574','Jl.riwica gaxezebid no.10', 'buno109@gmail.com'  FROM dual UNION ALL
+  select 'PL95','JL4','K38','nazo yokube dezim','085946979494','Jl.naliki tibelemawu no.82', 'nazo570@gmail.com'  FROM dual UNION ALL
+  select 'PL96','JL4','K13','disaq relotid fipano','082385063093','Jl.yapefeb hovuy no.29', 'disaq674@gmail.com'  FROM dual UNION ALL
+  select 'PL97','JL4','K39','noyekot beye','086388585867','Jl.suzah no.81', 'noyekot177@gmail.com'  FROM dual UNION ALL
+  select 'PL98','JL4','K9','megezin bare','080427397576','Jl.yiciwuv no.77', 'megezin439@gmail.com'  FROM dual UNION ALL
+  select 'PL99','JL4','K21','gasabod voru','080219101216','Jl.xaqifaja fulisefap no.63', 'gasabod977@gmail.com'  FROM dual UNION ALL
+  select 'PL100','JL4','K36','nofegen','088717835797','Jl.zedonizu no.9', 'nofegen971@gmail.com'  FROM dual UNION ALL
+  select 'PL101','JL4','K1','faye','080639587726','Jl.vohilir no.1', 'faye354@gmail.com'  FROM dual UNION ALL
+  select 'PL102','JL4','K32','jicod dobo','080400706842','Jl.vecej no.22', 'jicod881@gmail.com'  FROM dual UNION ALL
+  select 'PL103','JL4','K22','jiva wivukal podez','083349887696','Jl.jijiqiralo fegesodoso no.53', 'jiva16@gmail.com'  FROM dual UNION ALL
+  select 'PL104','JL4','K35','jabe','084462163112','Jl.sagicazuc no.68', 'jabe249@gmail.com'  FROM dual UNION ALL
+  select 'PL105','JL4','K18','raberaz lanadag honeg','086609058508','Jl.xurowulequ mikel no.2', 'raberaz429@gmail.com'  FROM dual UNION ALL
+  select 'PL106','JL4','K18','qukobo dutuyiy xaduqax','085144878253','Jl.fabuja no.97', 'qukobo79@gmail.com'  FROM dual UNION ALL
+  select 'PL107','JL4','K40','hexum worexex','080808230593','Jl.hediwud no.89', 'hexum437@gmail.com'  FROM dual UNION ALL
+  select 'PL108','JL4','K13','feho fovaki radul','085420758109','Jl.lagul nixohuy no.15', 'feho690@gmail.com'  FROM dual UNION ALL
+  select 'PL109','JL4','K2','logiq dequfom panil','086385550636','Jl.xifil no.33', 'logiq795@gmail.com'  FROM dual UNION ALL
+  select 'PL110','JL4','K27','laxe memaku','089833658565','Jl.girewayu no.44', 'laxe136@gmail.com'  FROM dual UNION ALL
+  select 'PL111','JL4','K36','pebar nasoz','086643555332','Jl.zegugudov no.44', 'pebar280@gmail.com'  FROM dual UNION ALL
+  select 'PL112','JL4','K36','rigabin puzumuk','080119122251','Jl.jasodicum turor no.66', 'rigabin23@gmail.com'  FROM dual UNION ALL
+  select 'PL113','JL4','K4','gebub xuquxey','087203163632','Jl.xezukaja mudewile no.43', 'gebub98@gmail.com'  FROM dual UNION ALL
+  select 'PL114','JL4','K2','jujaw hugoku betuvu','086970066803','Jl.gafeh no.58', 'jujaw52@gmail.com'  FROM dual UNION ALL
+  select 'PL115','JL4','K1','kovil','089496918687','Jl.tozape yavohima no.88', 'kovil606@gmail.com'  FROM dual UNION ALL
+  select 'PL116','JL4','K1','gixibur kadey wuxeni','086563894355','Jl.rasig no.97', 'gixibur261@gmail.com'  FROM dual UNION ALL
+  select 'PL117','JL4','K41','woba riduje','089873563385','Jl.huloyiwoyo no.53', 'woba35@gmail.com'  FROM dual UNION ALL
+  select 'PL118','JL4','K2','lozogor gula','088530172088','Jl.kujuze no.92', 'lozogor700@gmail.com'  FROM dual UNION ALL
+  select 'PL119','JL4','K24','naguxo civab','086095790495','Jl.babasat no.15', 'naguxo207@gmail.com'  FROM dual UNION ALL
+  select 'PL120','JL4','K18','dihal humi','085896013677','Jl.hibela no.80', 'dihal833@gmail.com'  FROM dual UNION ALL
+  select 'PL121','JL4','K30','jibon dece foyewaf','081573280152','Jl.ciripiniz lojoyuhiz no.74', 'jibon565@gmail.com'  FROM dual UNION ALL
+  select 'PL122','JL4','K40','furuqi','086943966242','Jl.wawogeco no.31', 'furuqi741@gmail.com'  FROM dual UNION ALL
+  select 'PL123','JL4','K11','zaxad maribot foteset','088420765420','Jl.rihawagu kacise no.90', 'zaxad239@gmail.com'  FROM dual UNION ALL
+  select 'PL124','JL4','K20','coparo zura','087614590634','Jl.torofenoya no.62', 'coparo948@gmail.com'  FROM dual UNION ALL
+  select 'PL125','JL4','K12','deyeb boji sekerom','086509236099','Jl.fefogicat tupuki no.65', 'deyeb582@gmail.com'  FROM dual UNION ALL
+  select 'PL126','JL4','K27','bota','089066129151','Jl.yutufaquj lerabebi no.74', 'bota763@gmail.com'  FROM dual UNION ALL
+  select 'PL127','JL4','K25','yofuj hikasez dadogor','088170273965','Jl.pihiqihel no.95', 'yofuj347@gmail.com'  FROM dual UNION ALL
+  select 'PL128','JL4','K18','bazapa','085895260100','Jl.rimewasa qociyi no.27', 'bazapa556@gmail.com'  FROM dual UNION ALL
+  select 'PL129','JL4','K32','kofip sopa fodukuc','089553607210','Jl.zofixufilo no.99', 'kofip156@gmail.com'  FROM dual UNION ALL
+  select 'PL130','JL4','K13','detebe dobumep','089805487875','Jl.hodaf fowozoko no.1', 'detebe629@gmail.com'  FROM dual UNION ALL
+  select 'PL131','JL4','K10','pime riwibez zibokuf','081684250448','Jl.cosoku no.43', 'pime729@gmail.com'  FROM dual UNION ALL
+  select 'PL132','JL4','K2','ruris mucexun','089919247489','Jl.nafawefig saruhej no.70', 'ruris247@gmail.com'  FROM dual UNION ALL
+  select 'PL133','JL4','K5','jeye cowoteq','086801126481','Jl.julezepida no.68', 'jeye875@gmail.com'  FROM dual UNION ALL
+  select 'PL134','JL4','K21','gurumo nulona','080697181239','Jl.muboga nusigaroco no.11', 'gurumo937@gmail.com'  FROM dual UNION ALL
+  select 'PL135','JL4','K42','lerax','083705262290','Jl.xowidozug no.84', 'lerax803@gmail.com'  FROM dual UNION ALL
+  select 'PL136','JL4','K42','xocu lojawez kacuyu','085610231862','Jl.piqidaqa hefuhud no.70', 'xocu106@gmail.com'  FROM dual UNION ALL
+  select 'PL137','JL4','K16','goboy','084730460373','Jl.rirapiy no.24', 'goboy173@gmail.com'  FROM dual UNION ALL
+  select 'PL138','JL4','K13','nozux siyuyas zavipi','086236086555','Jl.samoforuz no.18', 'nozux198@gmail.com'  FROM dual UNION ALL
+  select 'PL139','JL4','K41','moroveq fubi','089808781581','Jl.xowemix no.79', 'moroveq455@gmail.com'  FROM dual UNION ALL
+  select 'PL140','JL4','K2','lifawix','087279694718','Jl.kodopid nunuyuwege no.77', 'lifawix638@gmail.com'  FROM dual UNION ALL
+  select 'PL141','JL4','K2','junej','089045319599','Jl.tasizu zabozida no.20', 'junej424@gmail.com'  FROM dual UNION ALL
+  select 'PL142','JL4','K39','qofa','086221548229','Jl.hezak no.65', 'qofa879@gmail.com'  FROM dual UNION ALL
+  select 'PL143','JL4','K10','tegose kame lapihes','084120214180','Jl.rejoyiro no.98', 'tegose267@gmail.com'  FROM dual UNION ALL
+  select 'PL144','JL4','K19','jazu','088651767289','Jl.xakecebodu no.84', 'jazu609@gmail.com'  FROM dual UNION ALL
+  select 'PL145','JL4','K24','zebom poyute','083774602303','Jl.pivisujul letela no.67', 'zebom571@gmail.com'  FROM dual UNION ALL
+  select 'PL146','JL4','K15','memiyal sami','081561508425','Jl.rahuhogud raxavif no.99', 'memiyal564@gmail.com'  FROM dual UNION ALL
+  select 'PL147','JL4','K23','teres votuza','084575917020','Jl.deceliyahi pagaxevexu no.75', 'teres832@gmail.com'  FROM dual UNION ALL
+  select 'PL148','JL4','K39','nige vepuhap','089763824481','Jl.cekowaviro no.78', 'nige785@gmail.com'  FROM dual UNION ALL
+  select 'PL149','JL4','K36','leyiyi','085800105420','Jl.fupixul vosemur no.54', 'leyiyi887@gmail.com'  FROM dual UNION ALL
+  select 'PL150','JL4','K30','meqefus xoqavuf weto','083522717849','Jl.nohixoq no.37', 'meqefus922@gmail.com'  FROM dual UNION ALL
+  select 'PL151','JL4','K17','sufiv nuyi','083902993954','Jl.wodoq no.75', 'sufiv928@gmail.com'  FROM dual UNION ALL
+  select 'PL152','JL4','K40','qeyez haku bawib','086752023768','Jl.pajija no.71', 'qeyez796@gmail.com'  FROM dual UNION ALL
+  select 'PL153','JL4','K32','pucone josil','086634616370','Jl.demamunox hiqecebo no.93', 'pucone533@gmail.com'  FROM dual UNION ALL
+  select 'PL154','JL4','K26','notevo jibez','080765701044','Jl.kaqira no.36', 'notevo872@gmail.com'  FROM dual UNION ALL
+  select 'PL155','JL4','K6','guzum','084036259276','Jl.yoqupa no.7', 'guzum156@gmail.com'  FROM dual UNION ALL
+  select 'PL156','JL4','K42','xariwo yaqo','082302658270','Jl.cajira no.81', 'xariwo147@gmail.com'  FROM dual UNION ALL
+  select 'PL157','JL4','K14','vusoj xagufuf jihiway','087674097751','Jl.lubep diboyigel no.45', 'vusoj608@gmail.com'  FROM dual UNION ALL
+  select 'PL158','JL4','K31','bifawu','088466906275','Jl.jiviki no.24', 'bifawu792@gmail.com'  FROM dual UNION ALL
+  select 'PL159','JL4','K2','mirayav fulefe','083002511730','Jl.baniyowuyo mumilo no.5', 'mirayav647@gmail.com'  FROM dual UNION ALL
+  select 'PL160','JL4','K17','furey','084507602337','Jl.wiqohe no.87', 'furey762@gmail.com'  FROM dual UNION ALL
+  select 'PL161','JL4','K28','qobul soqol kilaro','088641265546','Jl.tudifakaqa joyasexiq no.35', 'qobul470@gmail.com'  FROM dual UNION ALL
+  select 'PL162','JL4','K23','golelu','084615209433','Jl.picexiqop no.15', 'golelu959@gmail.com'  FROM dual UNION ALL
+  select 'PL163','JL4','K36','yulahe','087292247273','Jl.luheh no.5', 'yulahe409@gmail.com'  FROM dual UNION ALL
+  select 'PL164','JL4','K1','vasi yomepeh wiyaxuf','087082315815','Jl.xuralohixi lameji no.24', 'vasi608@gmail.com'  FROM dual UNION ALL
+  select 'PL165','JL4','K32','deloru fuvegel yesu','080674411418','Jl.huboh haciwobeco no.66', 'deloru946@gmail.com'  FROM dual UNION ALL
+  select 'PL166','JL4','K20','yesifiy dojuqem','086585239316','Jl.sewokiwew soherorici no.55', 'yesifiy318@gmail.com'  FROM dual UNION ALL
+  select 'PL167','JL4','K23','qiyefa paleti selox','084479922987','Jl.padayute no.29', 'qiyefa573@gmail.com'  FROM dual UNION ALL
+  select 'PL168','JL4','K8','razol kezomo','082104401070','Jl.zedup fejudebac no.50', 'razol506@gmail.com'  FROM dual UNION ALL
+  select 'PL169','JL4','K34','kiseko maloy tabora','088798324138','Jl.qeyupeso rononaseyi no.23', 'kiseko17@gmail.com'  FROM dual UNION ALL
+  select 'PL170','JL4','K19','wedey bogu boleno','081836841630','Jl.boxihalamu no.81', 'wedey885@gmail.com'  FROM dual UNION ALL
+  select 'PL171','JL4','K5','kuhuyu pubiki sorepik','089816890147','Jl.ligotapupu nefigexok no.68', 'kuhuyu84@gmail.com'  FROM dual UNION ALL
+  select 'PL172','JL4','K18','fagu','082811870148','Jl.fuyof zofehixam no.83', 'fagu455@gmail.com'  FROM dual UNION ALL
+  select 'PL173','JL4','K38','wawurub moxol','087467825693','Jl.sasososin puxojipi no.35', 'wawurub655@gmail.com'  FROM dual UNION ALL
+  select 'PL174','JL4','K33','radij xenido','086799781501','Jl.tofiq xafavuqor no.78', 'radij393@gmail.com'  FROM dual UNION ALL
+  select 'PL175','JL4','K2','sabuja refi','086676077904','Jl.kadoka pazapi no.97', 'sabuja435@gmail.com'  FROM dual UNION ALL
+  select 'PL176','JL4','K32','kido savij jaqi','088012169988','Jl.zafepa paged no.90', 'kido385@gmail.com'  FROM dual UNION ALL
+  select 'PL177','JL4','K3','riyihu','081693248807','Jl.zabevaz no.11', 'riyihu642@gmail.com'  FROM dual UNION ALL
+  select 'PL178','JL4','K32','qasa','084658887703','Jl.voseb hixole no.59', 'qasa826@gmail.com'  FROM dual UNION ALL
+  select 'PL179','JL4','K35','jiga jugowu barig','084763040518','Jl.vijiva vetozurulu no.96', 'jiga887@gmail.com'  FROM dual UNION ALL
+  select 'PL180','JL4','K42','zonim kunorug woze','081211736776','Jl.hodafale jasabuzote no.14', 'zonim458@gmail.com'  FROM dual UNION ALL
+  select 'PL181','JL4','K21','xusapas jisawi bujene','084165317592','Jl.qodamot no.42', 'xusapas198@gmail.com'  FROM dual UNION ALL
+  select 'PL182','JL4','K30','zekawo sire rikiqe','087697236177','Jl.mutuhabe gefavo no.17', 'zekawo627@gmail.com'  FROM dual UNION ALL
+  select 'PL183','JL4','K25','hecejom xeti xuzuwa','088446973551','Jl.gopifok no.94', 'hecejom991@gmail.com'  FROM dual UNION ALL
+  select 'PL184','JL4','K13','vuqozi sifum benoma','086653321923','Jl.yizomebava no.38', 'vuqozi75@gmail.com'  FROM dual UNION ALL
+  select 'PL185','JL4','K32','lifepu','082210728325','Jl.pafujenoc no.11', 'lifepu333@gmail.com'  FROM dual UNION ALL
+  select 'PL186','JL4','K15','jodin xitami','083851900179','Jl.qosil no.67', 'jodin639@gmail.com'  FROM dual UNION ALL
+  select 'PL187','JL4','K37','cafiqan gede','086981328334','Jl.fuden no.64', 'cafiqan838@gmail.com'  FROM dual UNION ALL
+  select 'PL188','JL4','K25','dizo pizi votiz','084608859310','Jl.zocujis zavuzi no.3', 'dizo12@gmail.com'  FROM dual UNION ALL
+  select 'PL189','JL4','K37','kana rowez modoh','089739114678','Jl.jinayikoga nuvol no.15', 'kana15@gmail.com'  FROM dual UNION ALL
+  select 'PL190','JL4','K42','yafokip wuyahe reqasa','086813422399','Jl.nojusik no.29', 'yafokip59@gmail.com'  FROM dual UNION ALL
+  select 'PL191','JL4','K12','hoqu','083268954573','Jl.gogicog no.2', 'hoqu636@gmail.com'  FROM dual UNION ALL
+  select 'PL192','JL4','K24','jukoxip zuwa','088996557059','Jl.bedohix riseku no.5', 'jukoxip850@gmail.com'  FROM dual UNION ALL
+  select 'PL193','JL4','K30','qejec bawexi','081847633465','Jl.qokiti bequni no.0', 'qejec400@gmail.com'  FROM dual UNION ALL
+  select 'PL194','JL4','K25','qudo quju','080493295615','Jl.liqewo no.60', 'qudo12@gmail.com'  FROM dual UNION ALL
+  select 'PL195','JL4','K3','soyox zata','085100657770','Jl.fujoxih no.45', 'soyox975@gmail.com'  FROM dual UNION ALL
+  select 'PL196','JL4','K24','ralem','083495823230','Jl.litene fiwubegozi no.30', 'ralem440@gmail.com'  FROM dual UNION ALL
+  select 'PL197','JL4','K10','hipa','087985946899','Jl.vuday wixojari no.48', 'hipa126@gmail.com'  FROM dual UNION ALL
+  select 'PL198','JL4','K13','ziha','083079751306','Jl.jizij no.76', 'ziha642@gmail.com'  FROM dual UNION ALL
+  select 'PL199','JL4','K7','qesude','089932306413','Jl.nefukivu biloyiyime no.14', 'qesude184@gmail.com'  FROM dual UNION ALL
+  select 'PL200','JL4','K9','genigob fodul poduhok','084146391974','Jl.hosuwo no.80', 'genigob782@gmail.com'  FROM dual;
 
 create sequence SEQ_ID_PESANAN 
     minvalue 1 
@@ -8552,3 +8552,4 @@ select 'PG984','P984','JE1',TO_DATE('26/12/2019', 'DD/MM/YYYY'),'1201912264'  FR
   select 'PG1198','P1198','JE6',TO_DATE('26/01/2020', 'DD/MM/YYYY'),'6202001261'  FROM dual UNION ALL 
   select 'PG1199','P1199','JE5',TO_DATE('26/01/2020', 'DD/MM/YYYY'),'5202001262'  FROM dual UNION ALL 
   select 'PG1200','P1200','JE3',TO_DATE('26/01/2020', 'DD/MM/YYYY'),'3202001263'  FROM dual;
+
