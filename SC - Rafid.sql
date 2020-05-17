@@ -54,7 +54,7 @@ declare
     idbaru number;
 begin
     idbaru := SEQ_ID_Jenis_Pelanggan.nextval;
-    select 'JP' || idbaru into :new.ID_JENIS_PELANGGAN from dual;
+    select 'JL' || idbaru into :new.ID_JENIS_PELANGGAN from dual;
     
     if idbaru != :new.PRIORITAS_PELANGGAN
     then
