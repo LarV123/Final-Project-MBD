@@ -48,14 +48,16 @@ for each row
 DECLARE
     newtotal_harga number;
 begin
-	select sum(subtotal * (1-discount_barang))
+	select total_harga 
         into newtotal_harga
-        from detail_pemesanan dp
-        where :new.id_pesanan = dp.id_pesanan
-        group by dp.id_pesanan;
+        from pesanan
+        where :old.id_pesanan = id_pesanan;
+    newtotal_harga := newtotal_harga - (:old.subtotal * (1-:old.discount_barang));
     update pesanan
         set total_harga=newtotal_harga
-        where :new.id_pesanan = id_pesanan;
+        where :old.id_pesanan = id_pesanan;
+    exception
+        when others then null;
 end;
 /
 
