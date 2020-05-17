@@ -73,3 +73,25 @@ select p.id_pesanan, estimasi_lama_pengiriman(p.id_pesanan) as estimasi_lama
 select p.id_pesanan,p.Tanggal_pesan, pr.Tanggal_mengirim, pr.Tanggal_mengirim - p.Tanggal_pesan AS DateDiff
     from pesanan p, pengiriman pr
     where p.id_pesanan = pr.id_pesanan;
+
+
+
+
+
+-- Auto update jumlah terbayarkan
+create or replace trigger AIUD_PESANAN_jumlah_terbayarkan
+before insert or update or delete on pembayaran
+for each row
+DECLARE
+    newtotal number;
+begin
+	select sum(jumlah_pembayaran)
+        into newtotal
+        from pembayaran p
+        where :new.id_pesanan = p.id_pesanan
+        group by p.id_pesanan;
+    update pesanan
+        set jumlah_terbayarkan=newtotal
+        where :new.id_pesanan = id_pesanan;
+end;
+/
