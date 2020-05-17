@@ -362,7 +362,50 @@ INSERT INTO UPDATE_STOCK (ID_BARANG, ID_UPDATE_STOCK, TANGGAL_UPDATE, TIPE_UPDAT
   select 'B40', null, TO_DATE('12/05/2020', 'DD/MM/YYYY'), 'Tambah', 100  FROM dual UNION ALL 
   select 'B41', null, TO_DATE('12/05/2020', 'DD/MM/YYYY'), 'Tambah', 100  FROM dual UNION ALL 
   select 'B42', null, TO_DATE('12/05/2020', 'DD/MM/YYYY'), 'Tambah', 100  FROM dual UNION ALL 
-  select 'B43', null, TO_DATE('12/05/2020', 'DD/MM/YYYY'), 'Tambah', 100  FROM dual;
+  select 'B43', null, TO_DATE('12/05/2020', 'DD/MM/YYYY'), 'Tambah', 100  FROM dual UNION ALL
+  select 'B2',  null, TO_DATE('22/05/2020', 'DD/MM/YYYY'), 'Tambah', 12 FROM dual UNION ALL
+  select 'B1',  null, TO_DATE('13/05/2020', 'DD/MM/YYYY'), 'Tambah', 10 FROM dual UNION ALL
+  select 'B3',  null, TO_DATE('23/05/2020', 'DD/MM/YYYY'), 'Tambah', 130 FROM dual UNION ALL
+  select 'B4',  null, TO_DATE('12/06/2020', 'DD/MM/YYYY'), 'Tambah', 110 FROM dual UNION ALL
+  select 'B5',  null, TO_DATE('19/05/2020', 'DD/MM/YYYY'), 'Tambah', 130 FROM dual UNION ALL
+  select 'B6',  null, TO_DATE('20/05/2020', 'DD/MM/YYYY'), 'Tambah', 120 FROM dual UNION ALL
+  select 'B7',  null, TO_DATE('23/05/2020', 'DD/MM/YYYY'), 'Tambah', 130 FROM dual UNION ALL
+  select 'B8',  null, TO_DATE('6/05/2020', 'DD/MM/YYYY'), 'Tambah', 160 FROM dual UNION ALL
+  select 'B9',  null, TO_DATE('17/05/2020', 'DD/MM/YYYY'), 'Tambah', 110 FROM dual UNION ALL
+  select 'B10',  null, TO_DATE('1/05/2020', 'DD/MM/YYYY'), 'Tambah', 10 FROM dual UNION ALL
+  select 'B11',  null, TO_DATE('11/05/2020', 'DD/MM/YYYY'), 'Tambah', 11 FROM dual UNION ALL
+  select 'B12',  null, TO_DATE('17/05/2020', 'DD/MM/YYYY'), 'Tambah', 13 FROM dual UNION ALL
+  select 'B13',  null, TO_DATE('19/05/2020', 'DD/MM/YYYY'), 'Tambah', 14 FROM dual UNION ALL
+  select 'B14',  null, TO_DATE('30/05/2020', 'DD/MM/YYYY'), 'Tambah', 16 FROM dual UNION ALL
+  select 'B15',  null, TO_DATE('22/05/2020', 'DD/MM/YYYY'), 'Tambah', 13 FROM dual UNION ALL
+  select 'B16',  null, TO_DATE('21/05/2020', 'DD/MM/YYYY'), 'Tambah', 112 FROM dual UNION ALL
+  select 'B17',  null, TO_DATE('16/05/2020', 'DD/MM/YYYY'), 'Tambah', 11 FROM dual UNION ALL
+  select 'B18',  null, TO_DATE('13/05/2020', 'DD/MM/YYYY'), 'Tambah', 110 FROM dual UNION ALL
+  select 'B19',  null, TO_DATE('20/05/2020', 'DD/MM/YYYY'), 'Tambah', 110 FROM dual UNION ALL
+  select 'B20',  null, TO_DATE('12/07/2020', 'DD/MM/YYYY'), 'Tambah', 100 FROM dual UNION ALL
+  select 'B21',  null, TO_DATE('12/08/2020', 'DD/MM/YYYY'), 'Tambah', 23 FROM dual UNION ALL
+  select 'B22',  null, TO_DATE('12/11/2020', 'DD/MM/YYYY'), 'Tambah', 45 FROM dual UNION ALL
+  select 'B23',  null, TO_DATE('12/06/2020', 'DD/MM/YYYY'), 'Tambah', 36 FROM dual UNION ALL
+  select 'B24',  null, TO_DATE('13/05/2020', 'DD/MM/YYYY'), 'Tambah', 56 FROM dual UNION ALL
+  select 'B25',  null, TO_DATE('30/06/2020', 'DD/MM/YYYY'), 'Tambah', 78 FROM dual UNION ALL
+  select 'B26',  null, TO_DATE('30/07/2020', 'DD/MM/YYYY'), 'Tambah', 45 FROM dual UNION ALL
+  select 'B27',  null, TO_DATE('23/08/2020', 'DD/MM/YYYY'), 'Tambah', 45 FROM dual UNION ALL
+  select 'B28',  null, TO_DATE('14/06/2020', 'DD/MM/YYYY'), 'Tambah', 67 FROM dual UNION ALL
+  select 'B29',  null, TO_DATE('14/07/2020', 'DD/MM/YYYY'), 'Tambah', 12 FROM dual UNION ALL
+  select 'B30',  null, TO_DATE('14/08/2020', 'DD/MM/YYYY'), 'Tambah', 23 FROM dual UNION ALL
+  select 'B31',  null, TO_DATE('14/09/2020', 'DD/MM/YYYY'), 'Tambah', 25 FROM dual UNION ALL
+  select 'B32',  null, TO_DATE('14/10/2020', 'DD/MM/YYYY'), 'Tambah', 27 FROM dual UNION ALL
+  select 'B33',  null, TO_DATE('17/06/2020', 'DD/MM/YYYY'), 'Tambah', 35 FROM dual UNION ALL
+  select 'B34',  null, TO_DATE('17/08/2020', 'DD/MM/YYYY'), 'Tambah', 13 FROM dual UNION ALL
+  select 'B35',  null, TO_DATE('17/07/2020', 'DD/MM/YYYY'), 'Tambah', 67 FROM dual UNION ALL
+  select 'B36',  null, TO_DATE('17/09/2020', 'DD/MM/YYYY'), 'Tambah', 35 FROM dual UNION ALL
+  select 'B37',  null, TO_DATE('17/10/2020', 'DD/MM/YYYY'), 'Tambah', 58 FROM dual UNION ALL
+  select 'B38',  null, TO_DATE('19/05/2020', 'DD/MM/YYYY'), 'Tambah', 37 FROM dual UNION ALL
+  select 'B39',  null, TO_DATE('22/05/2020', 'DD/MM/YYYY'), 'Tambah', 14 FROM dual UNION ALL
+  select 'B40',  null, TO_DATE('13/05/2020', 'DD/MM/YYYY'), 'Tambah', 37 FROM dual UNION ALL
+  select 'B41',  null, TO_DATE('17/05/2020', 'DD/MM/YYYY'), 'Tambah', 24 FROM dual UNION ALL
+  select 'B42',  null, TO_DATE('18/05/2020', 'DD/MM/YYYY'), 'Tambah', 12 FROM dual UNION ALL
+  select 'B43',  null, TO_DATE('12/05/2020', 'DD/MM/YYYY'), 'Tambah', 46 FROM dual;
 
 INSERT INTO JENIS_EKSPEDISI (ID_EKSPEDISI, NAMA_EKSPEDISI, KONTAK_EKSPEDISI)  
   select 'JE1','Papandaya Cargo','0318546393'  FROM dual UNION ALL 
