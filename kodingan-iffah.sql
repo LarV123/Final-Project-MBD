@@ -1,3 +1,7 @@
+/*  
+https://livesql.oracle.com/apex/livesql/s/j3q4sm4941ekxsql4nlmqk8w1
+*/
+
 /*
 Query 1
 Pelanggan beralamat di Jawa Timur yang memesan lebih dari 100 barang pada Desember 2019 hingga Januari 2020
